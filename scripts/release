@@ -2,7 +2,7 @@
 
 set -e
 
-version="$(jq -r .version custom_components/mypyllant/manifest.json)"
+version="$(jq -r .version custom_components/VaillantCloud/manifest.json)"
 
 git tag "$version"
 git push origin "$version"
