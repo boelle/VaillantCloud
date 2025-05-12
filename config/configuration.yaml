@@ -3,8 +3,8 @@ default_config:
 logger:
   default: warning
   logs:
-    custom_components.mypyllant: debug
-    myPyllant: debug
+    custom_components.VaillantCloud: debug
+    VaillantCloud: debug
 
 debugpy:
   start: true
