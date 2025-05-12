@@ -2,15 +2,15 @@
   "domain": "mypyllant",
   "name": "myVAILLANT",
   "codeowners": [
-    "@signalkraft"
+    "@Robert"
   ],
   "config_flow": true,
-  "documentation": "https://github.com/signalkraft/mypyllant-component#readme",
+  "documentation": "https://github.com/rmalbrecht/mypyllant-component#readme",
   "integration_type": "hub",
   "iot_class": "cloud_polling",
-  "issue_tracker": "https://github.com/signalkraft/mypyllant-component/issues",
+  "issue_tracker": "https://github.com/rmalbrecht/mypyllant-component/issues",
   "requirements": [
-    "myPyllant==0.9.0"
+     "git+https://github.com/rmalbrecht/myPyllant.git@main#egg=myPyllant"
   ],
-  "version": "v0.9.2b0"
+  "version": "v0.9.3"
 }
