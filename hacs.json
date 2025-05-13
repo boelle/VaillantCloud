@@ -1,10 +1,7 @@
 {
   "name": "Vaillant Cloud Integration",
-  "domain": "VaillantCloud",
   "render_readme": true,
   "homeassistant": "2025.4.0",
   "zip_release": true,
   "filename": "VaillantCloud-component.zip",
-  "integration_type": "hub",
-  "iot_class": "cloud_polling"
 }
