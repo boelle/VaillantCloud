@@ -5,7 +5,6 @@
   "homeassistant": "2025.4.0",
   "zip_release": true,
   "filename": "VaillantCloud-component.zip",
-  "documentation": "https://github.com/rmalbrecht/VaillantCloud",
   "integration_type": "hub",
   "iot_class": "cloud_polling"
 }
