@@ -10,9 +10,9 @@ from myPyllant.api import MyPyllantAPI
 from myPyllant.tests.generate_test_data import DATA_DIR
 from myPyllant.tests.utils import load_test_data
 
-from custom_components.mypyllant.const import DOMAIN
-from custom_components.mypyllant import async_setup_entry, async_unload_entry
-from custom_components.mypyllant.config_flow import DATA_SCHEMA
+from custom_components.vaillantcloud.const import DOMAIN
+from custom_components.vaillantcloud import async_setup_entry, async_unload_entry
+from custom_components.vaillantcloud.config_flow import DATA_SCHEMA
 from tests.utils import get_config_entry, test_user_input
 
 _LOGGER = logging.getLogger(__name__)

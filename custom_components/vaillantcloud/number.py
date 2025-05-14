@@ -9,10 +9,10 @@ from homeassistant.const import UnitOfTime, UnitOfTemperature
 from homeassistant.core import HomeAssistant
 from homeassistant.helpers.entity_platform import AddEntitiesCallback
 
-from custom_components.mypyllant.const import DOMAIN, DEFAULT_HOLIDAY_SETPOINT
-from custom_components.mypyllant.decorators import ensure_token_refresh
-from custom_components.mypyllant.coordinator import SystemCoordinator
-from custom_components.mypyllant.utils import (
+from custom_components.vaillantcloud.const import DOMAIN, DEFAULT_HOLIDAY_SETPOINT
+from custom_components.vaillantcloud.decorators import ensure_token_refresh
+from custom_components.vaillantcloud.coordinator import SystemCoordinator
+from custom_components.vaillantcloud.utils import (
     HolidayEntity,
     SystemCoordinatorEntity,
     ZoneCoordinatorEntity,

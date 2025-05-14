@@ -8,14 +8,14 @@ from homeassistant.config_entries import ConfigEntry
 from homeassistant.core import HomeAssistant
 from homeassistant.helpers.entity_platform import AddEntitiesCallback
 
-from custom_components.mypyllant.const import (
+from custom_components.vaillantcloud.const import (
     DOMAIN,
     DEFAULT_HOLIDAY_SETPOINT,
     DEFAULT_DHW_LEGIONELLA_PROTECTION_TEMPERATURE,
 )
-from custom_components.mypyllant.decorators import ensure_token_refresh
-from custom_components.mypyllant.coordinator import SystemCoordinator
-from custom_components.mypyllant.utils import (
+from custom_components.vaillantcloud.decorators import ensure_token_refresh
+from custom_components.vaillantcloud.coordinator import SystemCoordinator
+from custom_components.vaillantcloud.utils import (
     HolidayEntity,
     EntityList,
     ManualCoolingEntity,
