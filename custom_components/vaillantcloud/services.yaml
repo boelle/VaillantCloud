@@ -3,7 +3,7 @@ set_quick_veto:
   description: Sets quick veto temperature with optional duration
   target:
     entity:
-      integration: mypyllant
+      integration: vaillantcloud
       domain: climate
   fields:
     temperature:
@@ -32,7 +32,7 @@ set_manual_mode_setpoint:
   description: Sets temperature for manual mode
   target:
     entity:
-      integration: mypyllant
+      integration: vaillantcloud
       domain: climate
   fields:
     temperature:
@@ -61,7 +61,7 @@ cancel_quick_veto:
   description: Cancels quick veto temperature and returns to normal schedule / manual setpoint
   target:
     entity:
-      integration: mypyllant
+      integration: vaillantcloud
       domain: climate
 
 set_holiday:
@@ -69,7 +69,7 @@ set_holiday:
   description: Set holiday / away mode with start / end or duration
   target:
     entity:
-      integration: mypyllant
+      integration: vaillantcloud
       domain: climate
   fields:
     start:
@@ -106,7 +106,7 @@ cancel_holiday:
   description: Cancel holiday / away mode
   target:
     entity:
-      integration: mypyllant
+      integration: vaillantcloud
       domain: climate
 
 set_cooling_for_days:
@@ -114,7 +114,7 @@ set_cooling_for_days:
   description: Enables manual cooling between start and end dates
   target:
     entity:
-      integration: mypyllant
+      integration: vaillantcloud
       domain: climate
   fields:
     start:
@@ -144,7 +144,7 @@ cancel_cooling_for_days:
   description: Cancel manual cooling
   target:
     entity:
-      integration: mypyllant
+      integration: vaillantcloud
       domain: climate
 
 set_ventilation_boost:
@@ -152,7 +152,7 @@ set_ventilation_boost:
   description: Disables heating / cooling for 30min for a quick ventilation boost
   target:
     entity:
-      integration: mypyllant
+      integration: vaillantcloud
       domain: climate
 
 cancel_ventilation_boost:
@@ -160,7 +160,7 @@ cancel_ventilation_boost:
   description: Cancels Ventilation Boost early
   target:
     entity:
-      integration: mypyllant
+      integration: vaillantcloud
       domain: climate
 
 set_time_program:
@@ -168,7 +168,7 @@ set_time_program:
   description: Updates the time program for a zone or room
   target:
     entity:
-      integration: mypyllant
+      integration: vaillantcloud
       domain: climate
   fields:
     program_type:
@@ -218,7 +218,7 @@ set_zone_time_program:
   description: Deprecated, use "Set Time Program" instead
   target:
     entity:
-      integration: mypyllant
+      integration: vaillantcloud
       domain: climate
   fields:
     program_type:
@@ -268,7 +268,7 @@ set_zone_operating_mode:
   description: Same as setting HVAC mode, but allows setting heating or cooling
   target:
     entity:
-      integration: mypyllant
+      integration: vaillantcloud
       domain: climate
   fields:
     mode:
@@ -299,7 +299,7 @@ set_dhw_time_program:
   description: Updates the time program for a water heater
   target:
     entity:
-      integration: mypyllant
+      integration: vaillantcloud
       domain: water_heater
   fields:
     time_program:
@@ -333,7 +333,7 @@ set_dhw_circulation_time_program:
   description: Updates the time program for the circulation pump of a water heater
   target:
     entity:
-      integration: mypyllant
+      integration: vaillantcloud
       domain: water_heater
   fields:
     time_program:
