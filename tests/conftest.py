@@ -10,7 +10,7 @@ from custom_components.vaillantcloud.coordinator import (
 from myPyllant.api import MyPyllantAPI
 from myPyllant.const import DEFAULT_BRAND
 from myPyllant.models import Circuit, DomesticHotWater, System, Zone
-from myPyllant.tests.utils import _mocked_api, _vaillantcloud_aioresponses
+from myPyllant.tests.utils import _mocked_api, _myPyllant_aioresponses
 from polyfactory.factories import DataclassFactory
 
 from custom_components.vaillantcloud.const import (
