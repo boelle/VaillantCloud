@@ -8,7 +8,7 @@ async def test_mypyllant_versions():
     """
     files = [
         Path(".").parent / "dev-requirements.txt",
-        Path(".").parent / "custom_components/mypyllant/manifest.json",
+        Path(".").parent / "custom_components/vaillantcloud/manifest.json",
     ]
     p = re.compile(r"myPyllant==(.*?)[\"\n]")
     matches = [re.findall(p, f.read_text()) for f in files]
