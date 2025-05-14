@@ -14,5 +14,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - run: docker build -t VaillantCloud-docs . -f docs/Dockerfile
-      - run: docker run -v ~/.ssh:/root/.ssh VaillantCloud-docs gh-deploy --force
+      - run: docker build -t vaillantcloud-docs . -f docs/Dockerfile
+      - run: docker run -v ~/.ssh:/root/.ssh vaillantcloud-docs gh-deploy --force
