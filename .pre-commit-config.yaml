@@ -22,7 +22,7 @@ repos:
       - id: check-executables-have-shebangs
         stages: [ manual ]
       - id: check-json
-  # These hooks require the locally installed venv (for example myPyllant for mypy)
+  # These hooks require the locally installed venv (for example vaillantcloud for mypy)
   - repo: local
     hooks:
       - id: mypy
