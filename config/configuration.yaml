@@ -3,8 +3,8 @@ default_config:
 logger:
   default: warning
   logs:
-    custom_components.VaillantCloud: debug
-    VaillantCloud: debug
+    custom_components.vaillantcloud: debug
+    vaillantcloud: debug
 
 debugpy:
   start: true
