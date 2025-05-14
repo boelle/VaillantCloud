@@ -1,6 +1,6 @@
 # yaml-language-server: $schema=https://squidfunk.github.io/mkdocs-material/schema.json
 site_name: myPyllant Library & Home Assistant Component
-site_url: https://signalkraft.com/mypyllant-component/
+site_url: https://github.com/rmalbrecht/VaillantCloud/
 theme:
   name: material
   language: en
@@ -20,7 +20,7 @@ plugins:
   - social
   - search
   - glightbox
-repo_url: https://github.com/signalkraft/mypyllant-component/
+repo_url: https://github.com/rmalbrecht/VaillantCloud/
 markdown_extensions:
   - admonition
   - attr_list
