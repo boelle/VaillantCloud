@@ -9,7 +9,7 @@ services:
     volumes:
       - ./docker/entrypoint.sh:/init-custom
       - ./docker/config.tar.gz:/tmp/config.tar.gz
-      - ../myPyllant/src/myPyllant:/tmp/myPyllant
-      - ./custom_components/VaillantCloud/:/tmp/VaillantCloud-component
+      - ../vaillantcloud/src/vaillantcloud:/tmp/vaillantcloud
+      - ./custom_components/vaillantcloud/:/tmp/vaillantcloud-component
       - /etc/localtime:/etc/localtime:ro
     entrypoint: ["/init-custom"]
