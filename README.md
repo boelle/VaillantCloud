@@ -1,7 +1,7 @@
 # myPyllant Home Assistant Component
 
-[![GitHub Release](https://img.shields.io/github/release/signalkraft/mypyllant-component.svg)](https://github.com/signalkraft/mypyllant-component/releases)
-[![License](https://img.shields.io/github/license/signalkraft/mypyllant-component.svg)](https://github.com/signalkraft/mypyllant-component/blob/main/LICENSE)
+[![GitHub Release](https://img.shields.io/github/release/signalkraft/mypyllant-component.svg)](hthttps://github.com/rmalbrecht/VaillantCloud-component/releases)
+[![License](https://img.shields.io/github/license/signalkraft/mypyllant-component.svg)](hthttps://github.com/rmalbrecht/VaillantCloud-component/blob/main/LICENSE)
 ![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/signalkraft/mypyllant-component/build-test.yaml)
 
 Home Assistant component that interfaces with the myVAILLANT API (and branded versions of it, such as the MiGo Link app
@@ -15,7 +15,7 @@ from Saunier Duval & Bulex).
 
 * [Documentation](https://signalkraft.com/mypyllant-component/)
 * [Discussion on Home Assistant Community](https://community.home-assistant.io/t/myvaillant-integration/542610)
-* [myPyllant Python library](https://github.com/signalkraft/mypyllant)
+* [myPyllant Python library](hthttps://github.com/rmalbrecht/VaillantCloud)
 
 ## Tested Setups
 
@@ -51,7 +51,7 @@ from Saunier Duval & Bulex).
 
 ### Manual
 
-1. Download [the latest release](https://github.com/signalkraft/mypyllant-component/releases)
+1. Download [the latest release](hthttps://github.com/rmalbrecht/VaillantCloud-component/releases)
 2. Extract the `custom_components` folder to your Home Assistant's config folder, the resulting folder structure should
    be `config/custom_components/mypyllant`
 3. Restart Home Assistant
