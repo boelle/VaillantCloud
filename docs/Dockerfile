@@ -4,7 +4,7 @@ RUN pip install --no-cache-dir \
   mkdocs-material[imaging] \
   mkdocstrings[python] \
   mkdocs-glightbox \
-  git+https://github.com/rmalbrecht/VaillantCloud.git
+  git+https://github.com/rmalbrecht/myPyllant.git
 
 WORKDIR /docs
 
