@@ -74,8 +74,8 @@ class DomesticHotWaterFactory(DataclassFactory):
 
 
 @pytest.fixture
-def mypyllant_aioresponses():
-    return _mypyllant_aioresponses()
+def vaillantcloud_aioresponses():
+    return _vaillantcloud_aioresponses()
 
 
 @pytest.fixture
