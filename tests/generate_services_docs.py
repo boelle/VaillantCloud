@@ -76,7 +76,7 @@ def main():
     headings = ["Name", "Description", "Target", "Fields"]
     data = []
     with open(
-        Path(__file__).parents[1] / "custom_components/mypyllant/services.yaml", "r"
+        Path(__file__).parents[1] / "custom_components/vaillantcloud/services.yaml", "r"
     ) as stream:
         try:
             services = yaml.safe_load(stream)
@@ -91,7 +91,7 @@ def main():
                 )
                 data += [
                     (
-                        f"[{service['name']}](https://my.home-assistant.io/redirect/developer_call_service/?service=mypyllant.{name})",
+                        f"[{service['name']}](https://my.home-assistant.io/redirect/developer_call_service/?service=vaillantcloud.{name})",
                         service["description"],
                         target,
                         ", ".join([f["name"] for f in service_fields]),
