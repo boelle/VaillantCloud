@@ -57,11 +57,11 @@ async def test_user_flow_minimum_fields(hass: HomeAssistant):
 
 async def test_async_setup(
     hass,
-    mypyllant_aioresponses,
+    vaillantcloud_aioresponses,
     mocked_api: MyPyllantAPI,
 ):
     test_data = load_test_data(DATA_DIR / "heatpump_heat_curve")
-    with mypyllant_aioresponses(test_data) as _:
+    with vaillantcloud_aioresponses(test_data) as _:
         config_entry = get_config_entry()
         config_entry.add_to_hass(hass)
         await hass.config_entries.async_setup(config_entry.entry_id)
