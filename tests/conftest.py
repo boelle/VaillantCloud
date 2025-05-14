@@ -10,7 +10,11 @@ from custom_components.vaillantcloud.coordinator import (
 from myPyllant.api import MyPyllantAPI
 from myPyllant.const import DEFAULT_BRAND
 from myPyllant.models import Circuit, DomesticHotWater, System, Zone
+<<<<<<< HEAD
 from myPyllant.tests.utils import _mocked_api, _mypyllant_aioresponses
+=======
+from myPyllant.tests.utils import _mocked_api, _vaillantcloud_aioresponses
+>>>>>>> parent of 2b5844d (Update conftest.py)
 from polyfactory.factories import DataclassFactory
 
 from custom_components.vaillantcloud.const import (
