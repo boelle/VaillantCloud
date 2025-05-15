@@ -5,17 +5,13 @@ hide:
   - navigation
 ---
 
-[![myPyllant](assets/logo.png){ align=right width="25%" }]()
+[![VaillantCloud](assets/logo.png){ align=right width="25%" }]()
 
 # Getting Started
 
-[![GitHub Release](https://img.shields.io/github/release/signalkraft/mypyllant-component.svg)](https://github.com/signalkraft/mypyllant-component/releases)
-[![License](https://img.shields.io/github/license/signalkraft/mypyllant-component.svg)](https://github.com/signalkraft/mypyllant-component/blob/main/LICENSE)
-[![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/signalkraft/mypyllant-component/build-test.yaml)](https://github.com/signalkraft/mypyllant-component/actions)
-
 Home Assistant component that interfaces with the myVAILLANT API
 (and branded versions of it, such as the MiGo Link app from Saunier Duval & Bulex).
-Uses the [myPyllant Python library](https://github.com/signalkraft/mypyllant).
+Uses the [myPyllant Python library](https://github.com/rmalbrecht/mypyllant).
 
 ## Installation
 
@@ -27,25 +23,25 @@ Uses the [myPyllant Python library](https://github.com/signalkraft/mypyllant).
 === "HACS"
 
     1. [Install the Home Assistant Community Store (HACS)](https://hacs.xyz/docs/setup/download)
-    2. Search for myVAILLANT in HACS :material-arrow-right: Integrations and download it
+    2. Search for VaillantCloud in HACS :material-arrow-right: Integrations and download it
     3. Restart Home Assistant
-    4. [Add myVaillant integration](https://my.home-assistant.io/redirect/config_flow_start/?domain=mypyllant), or go to
+    4. [Add VaillantCloud integration](https://my.home-assistant.io/redirect/config_flow_start/?domain=VaillantCloud), or go to
        Settings :material-arrow-right: Devices & services :material-arrow-right: Add Integration
     5. Sign in with the email & password you used in the myVAILLANT app (or MiGo app for Saunier Duval)
 
-    Having problems? [Open an issue](https://github.com/signalkraft/mypyllant-component/issues/new/choose).
+    Having problems? [Open an issue](https://github.com/rmalbrecht/VaillantCloud/issues/new).
 
 === "Manual"
     
-    1. Download [the latest release](https://github.com/signalkraft/mypyllant-component/releases)
+    1. Download [the latest release](https://github.com/rmalbrecht/VaillantCloud/releases)
     2. Extract the `custom_components` folder to your Home Assistant's config folder, the resulting folder structure should
-       be `config/custom_components/mypyllant`
+       be `config/custom_components/VaillantCloud`
     3. Restart Home Assistant
-    4. [Add myVaillant integration](https://my.home-assistant.io/redirect/config_flow_start/?domain=mypyllant), or go to
+    4. [Add VaillantCloud integration](https://my.home-assistant.io/redirect/config_flow_start/?domain=VaillantCloud), or go to
        Settings :material-arrow-right: Devices & services :material-arrow-right: Add Integration
     5. Sign in with the email & password you used in the myVAILLANT app (or MiGo app for Saunier Duval)
 
-    Having problems? [Open an issue](https://github.com/signalkraft/mypyllant-component/issues/new/choose).
+    Having problems? [Open an issue](https://github.com/rmalbrecht/mypyllant-component/issues/new).
 
 
 ## Features
@@ -141,7 +137,7 @@ After setting up the integration, you can configure it further in Settings :mate
     You can also schedule your own updates with an automation, for example once a day just before midnight:
     
     ```yaml
-    description: "Update myVAILLANT energy data at midnight"
+    description: "Update VaillantCloud energy data at midnight"
     mode: single
     triggers:
       - trigger: time
@@ -233,7 +229,7 @@ After setting up the integration, you can configure it further in Settings :mate
 
 !!! note "Missing a Country?"
 
-    If a country is missing, please [open an issue](https://github.com/signalkraft/myPyllant/issues/new/choose)
+    If a country is missing, please [open an issue](https://github.com/rmalbrecht/VaillantCloud/issues/new/)
     or [contribute a new country to the myPyllant library](3-contributing.md#supporting-new-countries).
 
 - Vaillant
