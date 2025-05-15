@@ -10,9 +10,9 @@ from myPyllant.api import MyPyllantAPI
 from myPyllant.tests.generate_test_data import DATA_DIR
 from myPyllant.tests.utils import load_test_data
 
-from custom_components.vaillantcloud.const import DOMAIN
-from custom_components.vaillantcloud import async_setup_entry, async_unload_entry
-from custom_components.vaillantcloud.config_flow import DATA_SCHEMA
+from custom_components.VaillantCloud.const import DOMAIN
+from custom_components.VaillantCloud import async_setup_entry, async_unload_entry
+from custom_components.VaillantCloud.config_flow import DATA_SCHEMA
 from tests.utils import get_config_entry, test_user_input
 
 _LOGGER = logging.getLogger(__name__)
@@ -29,7 +29,7 @@ async def test_flow_init(hass):
         "description_placeholders": None,
         "errors": {},
         "flow_id": mock.ANY,
-        "handler": "vaillantcloud",
+        "handler": "VaillantCloud",
         "step_id": "user",
         "type": "form",
         "last_step": None,

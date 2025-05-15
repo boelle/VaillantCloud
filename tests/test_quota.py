@@ -9,7 +9,7 @@ from homeassistant.helpers.update_coordinator import UpdateFailed
 from myPyllant.api import MyPyllantAPI
 from myPyllant.tests.utils import list_test_data
 
-from custom_components.vaillantcloud.const import (
+from custom_components.VaillantCloud.const import (
     API_DOWN_PAUSE_INTERVAL,
     QUOTA_PAUSE_INTERVAL,
 )

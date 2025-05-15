@@ -16,9 +16,9 @@ from homeassistant.helpers import selector
 from homeassistant.helpers.device_registry import DeviceInfo
 from homeassistant.helpers.update_coordinator import CoordinatorEntity
 
-from custom_components.vaillantcloud.const import DOMAIN
-from custom_components.vaillantcloud.decorators import ensure_token_refresh
-from custom_components.vaillantcloud.coordinator import SystemCoordinator
+from custom_components.VaillantCloud.const import DOMAIN
+from custom_components.VaillantCloud.decorators import ensure_token_refresh
+from custom_components.VaillantCloud.coordinator import SystemCoordinator
 from myPyllant.enums import (
     VentilationOperationMode,
     VentilationFanStageType,

@@ -11,7 +11,7 @@ from aiohttp.client_exceptions import ClientResponseError
 from homeassistant.config_entries import ConfigEntry
 from homeassistant.helpers.device_registry import DeviceInfo
 from homeassistant.helpers.update_coordinator import CoordinatorEntity
-from custom_components.vaillantcloud.const import (
+from custom_components.VaillantCloud.const import (
     DOMAIN,
     OPTION_DEFAULT_HOLIDAY_DURATION,
     OPTION_DEFAULT_MANUAL_COOLING_DURATION,
@@ -20,7 +20,7 @@ from custom_components.vaillantcloud.const import (
 from myPyllant.const import DEFAULT_HOLIDAY_DURATION
 
 if typing.TYPE_CHECKING:
-    from custom_components.vaillantcloud.coordinator import SystemCoordinator
+    from custom_components.VaillantCloud.coordinator import SystemCoordinator
     from myPyllant.models import (
         System,
         DomesticHotWater,

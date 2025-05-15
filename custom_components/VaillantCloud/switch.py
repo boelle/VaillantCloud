@@ -7,10 +7,10 @@ from homeassistant.config_entries import ConfigEntry
 from homeassistant.core import HomeAssistant
 from homeassistant.helpers.entity_platform import AddEntitiesCallback
 
-from custom_components.vaillantcloud.const import DOMAIN, DEFAULT_HOLIDAY_SETPOINT
-from custom_components.vaillantcloud.decorators import ensure_token_refresh
-from custom_components.vaillantcloud.coordinator import SystemCoordinator
-from custom_components.vaillantcloud.utils import (
+from custom_components.VaillantCloud.const import DOMAIN, DEFAULT_HOLIDAY_SETPOINT
+from custom_components.VaillantCloud.decorators import ensure_token_refresh
+from custom_components.VaillantCloud.coordinator import SystemCoordinator
+from custom_components.VaillantCloud.utils import (
     HolidayEntity,
     DomesticHotWaterCoordinatorEntity,
     EntityList,

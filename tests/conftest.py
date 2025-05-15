@@ -3,7 +3,7 @@ from unittest import mock
 
 import pytest
 
-from custom_components.vaillantcloud.coordinator import (
+from custom_components.VaillantCloud.coordinator import (
     SystemCoordinator,
     DailyDataCoordinator,
 )
@@ -13,7 +13,7 @@ from myPyllant.models import Circuit, DomesticHotWater, System, Zone
 from myPyllant.tests.utils import _mocked_api, _mypyllant_aioresponses
 from polyfactory.factories import DataclassFactory
 
-from custom_components.vaillantcloud.const import (
+from custom_components.VaillantCloud.const import (
     DEFAULT_COUNTRY,
     DOMAIN,
     OPTION_BRAND,

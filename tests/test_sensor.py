@@ -8,7 +8,7 @@ from myPyllant.enums import CircuitState
 from myPyllant.tests.generate_test_data import DATA_DIR
 from myPyllant.tests.utils import list_test_data, load_test_data
 
-from custom_components.vaillantcloud.sensor import (
+from custom_components.VaillantCloud.sensor import (
     CircuitFlowTemperatureSensor,
     CircuitHeatingCurveSensor,
     CircuitMinFlowTemperatureSetpointSensor,
@@ -33,7 +33,7 @@ from custom_components.vaillantcloud.sensor import (
     SystemTopCHTemperatureSensor,
     SystemDeviceCurrentPowerSensor,
 )
-from custom_components.vaillantcloud.const import DOMAIN
+from custom_components.VaillantCloud.const import DOMAIN
 from tests.utils import get_config_entry
 
 

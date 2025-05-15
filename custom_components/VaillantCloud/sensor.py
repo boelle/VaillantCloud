@@ -29,7 +29,7 @@ from myPyllant.models import (
     System,
 )
 
-from custom_components.vaillantcloud.utils import (
+from custom_components.VaillantCloud.utils import (
     SystemCoordinatorEntity,
     DomesticHotWaterCoordinatorEntity,
     ZoneCoordinatorEntity,

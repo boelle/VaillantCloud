@@ -1,6 +1,6 @@
 import logging
 
-from custom_components.vaillantcloud.utils import EntityList
+from custom_components.VaillantCloud.utils import EntityList
 
 
 async def test_log_on_entity_exception(caplog):

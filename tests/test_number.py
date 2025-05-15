@@ -1,5 +1,5 @@
-from custom_components.vaillantcloud import SystemCoordinator
-from custom_components.vaillantcloud.number import SystemManualCoolingDays
+from custom_components.VaillantCloud import SystemCoordinator
+from custom_components.VaillantCloud.number import SystemManualCoolingDays
 from myPyllant.api import MyPyllantAPI
 from myPyllant.tests.generate_test_data import DATA_DIR
 from myPyllant.tests.utils import load_test_data
