@@ -12,7 +12,7 @@ from homeassistant.core import HomeAssistant
 from homeassistant.helpers.update_coordinator import DataUpdateCoordinator, UpdateFailed
 from homeassistant.helpers import entity_registry as er
 
-from custom_components.vaillantcloud.const import (
+from custom_components.VaillantCloud.const import (
     DOMAIN,
     OPTION_REFRESH_DELAY,
     DEFAULT_REFRESH_DELAY,
@@ -29,7 +29,7 @@ from custom_components.vaillantcloud.const import (
     OPTION_FETCH_EEBUS,
     DEFAULT_FETCH_EEBUS,
 )
-from custom_components.vaillantcloud.utils import is_quota_exceeded_exception
+from custom_components.VaillantCloud.utils import is_quota_exceeded_exception
 from myPyllant.api import MyPyllantAPI
 from myPyllant.enums import DeviceDataBucketResolution
 from myPyllant.models import System, DeviceData
