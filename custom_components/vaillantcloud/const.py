@@ -1,6 +1,6 @@
 from myPyllant.enums import ZoneOperatingType
 
-DOMAIN = "vaillantcloud"
+DOMAIN = "VaillantCloud"
 OPTION_UPDATE_INTERVAL = "update_interval"
 OPTION_UPDATE_INTERVAL_DAILY = "update_interval_daily"
 OPTION_REFRESH_DELAY = "refresh_delay"
