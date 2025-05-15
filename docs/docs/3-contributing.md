@@ -60,7 +60,7 @@ and [attach it to an issue](https://github.com/signalkraft/myPyllant/issues/new/
 
     You need at least Python 3.10.
 
-Fork and clone the [mypyllant-component repository](https://github.com/signalkraft/mypyllant-component), then from
+Fork and clone the [VaillantCloud repository](https://github.com/signalkraft/mypyllant-component), then from
 within the directory run:
 
 ```shell
@@ -73,15 +73,15 @@ git commit -m ...  # Code formatting, analysis, and tests are run automatically 
 ```
 
 If you also need to modify the underlying [myPyllant library](https://github.com/signalkraft/mypyllant),
-clone & install it in editable mode in `mypyllant-component`:
+clone & install it in editable mode in `VaillantCloud`:
 
 ```shell
-# From within the mypyllant-component directory
+# From within the VaillantCloud directory
 git clone https://github.com/signalkraft/myPyllant.git ../myPyllant
 pip install -e ../myPyllant
 ```
 
-Now you can modify `myPyllant/src` and directly develop against these changes in `mypyllant-component`.
+Now you can modify `myPyllant/src` and directly develop against these changes in `VaillantCloud`.
 
 ### VSCode Dev Container
 

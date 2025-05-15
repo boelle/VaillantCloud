@@ -1,5 +1,5 @@
 ---
-description: Useful Home Assistant automations with mypyllant-component
+description: Useful Home Assistant automations with VaillantCloud
 hide:
   - navigation
 ---

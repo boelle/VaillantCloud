@@ -41,7 +41,7 @@ Uses the [myPyllant Python library](https://github.com/rmalbrecht/mypyllant).
        Settings :material-arrow-right: Devices & services :material-arrow-right: Add Integration
     5. Sign in with the email & password you used in the myVAILLANT app (or MiGo app for Saunier Duval)
 
-    Having problems? [Open an issue](https://github.com/rmalbrecht/mypyllant-component/issues/new).
+    Having problems? [Open an issue](https://github.com/rmalbrecht/VaillantCloud/issues/new).
 
 
 ## Features

@@ -1,5 +1,5 @@
 ---
-description: Available entities and extra attributes in mypyllant-component
+description: Available entities and extra attributes in VaillantCloud
 hide:
   - navigation
 ---
@@ -117,7 +117,7 @@ There are separate climate entities for Ambisense room thermostats (only support
 ## Calendar Entities
 
 <video style="float: right; width: 40%; margin: 0 0 15px 15px; min-width: 200px;" autoplay muted loop playsinline style="max-width: 600px; width: 100%; margin: 0 auto;">
-    <source src="/mypyllant-component/assets/calendar.mp4" type="video/mp4">
+    <source src="/VaillantCloud/assets/calendar.mp4" type="video/mp4">
 </video>
 
 Each zone and water heater has a calendar for changing the heating schedule. Water heaters also have a calendar for 
