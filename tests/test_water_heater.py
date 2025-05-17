@@ -55,7 +55,10 @@ async def test_async_setup_water_heater(
 
 @pytest.mark.parametrize("test_data", list_test_data())
 async def test_water_heater(
-    myvaillant_aioresponses, mocked_api: MyVaillantAPI, system_coordinator_mock, test_data
+    myvaillant_aioresponses,
+    mocked_api: MyVaillantAPI,
+    system_coordinator_mock,
+    test_data,
 ):
     with myvaillant_aioresponses(test_data) as _:
         system_coordinator_mock.data = (
