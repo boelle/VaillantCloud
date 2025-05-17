@@ -104,107 +104,11 @@ Your HVAC system might differ from the ones in `Tested on` above.
 If you don't see any entities, or get an error during setup, please check `Debugging` below and create an issue.
 With debugging enabled, there's a chance to find the culprit in the data returned by the myVAILLANT API and fix it.
 
-# Entities
+## Vaillant Load Limits
 
-You can expect these entities, although names will vary based on your home name (here "Home"),
-installed devices (in this example "aroTHERM plus" and "hydraulic station"),
-or the naming of your heating zones (in this case "Zone 1"):
+To protect their API Vaillant has employed load limits. While the excact limits are unkown, there more app-installtions and the more often Home Assistant polls the information, the faster you will hit the limit. Nothing can be done here.
 
-| Entity                                                                        | Unit   | Class        | Sample                    |
-|-------------------------------------------------------------------------------|--------|--------------|---------------------------|
-| Home Trouble Codes                                                            |        | problem      | off                       |
-| Home Online Status                                                            |        | connectivity | on                        |
-| Home Firmware Update Required                                                 |        | update       | off                       |
-| Home Firmware Update Enabled                                                  |        |              | on                        |
-| Home EEBUS Enabled                                                            |        |              | on                        |
-| Home EEBUS Capable                                                            |        |              | on                        |
-| Home Circuit 0 Cooling Allowed                                                |        |              | on                        |
-| Home Zone 1 (Circuit 0) Manual Cooling Active                                 |        |              | off                       |
-| Home Zone 1 (Circuit 0)                                                       |        |              | on                        |
-| Home Zone 1 (Circuit 0)                                                       |        |              | on                        |
-| Home Domestic Hot Water 0                                                     |        |              | on                        |
-| Circulating Water in Home Domestic Hot Water 0                                |        |              | off                       |
-| Home Zone 1 (Circuit 0) Climate                                               |        |              | auto                      |
-| Home Away Mode Start Date                                                     |        |              | unknown                   |
-| Home Away Mode End Date                                                       |        |              | unknown                   |
-| Home Manual Cooling Start Date                                                |        |              | unknown                   |
-| Home Manual Cooling End Date                                                  |        |              | unknown                   |
-| Home Holiday Duration Remaining                                               | d      |              | 0                         |
-| Home Manual Cooling Duration                                                  | d      |              | 0                         |
-| Home Zone 1 (Circuit 0) Quick Veto Duration                                   | h      |              | 2                         |
-| Home Circuit 0 Heating Curve                                                  |        |              | 1.2733452                 |
-| Home Circuit 0 Heat Demand Limited by Outside Temperature                     | °C     |              | 18.0                      |
-| Home Circuit 0 Min Flow Temperature Setpoint                                  | °C     |              | 32.0                      |
-| Vaillant API Request Count                                                    |        |              | 51                        |
-| Home Outdoor Temperature                                                      | °C     | temperature  | 17.3                      |
-| Home System Water Pressure                                                    | bar    | pressure     | 1.5                       |
-| Home Firmware Version                                                         |        |              | 0357.40.35                |
-| Home Zone 1 (Circuit 0) Desired Temperature                                   | °C     | temperature  | 0.0                       |
-| Home Zone 1 (Circuit 0) Desired Heating Temperature                           | °C     | temperature  | 0.0                       |
-| Home Zone 1 (Circuit 0) Desired Cooling Temperature                           | °C     | temperature  | 25.0                      |
-| Home Zone 1 (Circuit 0) Current Temperature                                   | °C     | temperature  | 21.5                      |
-| Home Zone 1 (Circuit 0) Humidity                                              | %      | humidity     | 62.0                      |
-| Home Zone 1 (Circuit 0) Heating Operating Mode                                |        |              | Time Controlled           |
-| Home Zone 1 (Circuit 0) Heating State                                         |        |              | Idle                      |
-| Home Zone 1 (Circuit 0) Current Special Function                              |        |              | Quick Veto                |
-| Home Circuit 0 State                                                          |        |              | STANDBY                   |
-| Home Circuit 0 Current Flow Temperature                                       | °C     | temperature  | 41.0                      |
-| Home Circuit 0 Heating Curve                                                  |        |              | 1.27                      |
-| Home Domestic Hot Water 0 Tank Temperature                                    | °C     | temperature  | 51.5                      |
-| Home Domestic Hot Water 0 Setpoint                                            | °C     | temperature  | 52.0                      |
-| Home Domestic Hot Water 0 Operation Mode                                      |        |              | Time Controlled           |
-| Home Domestic Hot Water 0 Current Special Function                            |        |              | Regular                   |
-| Home Heating Energy Efficiency                                                |        |              | 4.9                       |
-| Home Device 0 aroTHERM plus Heating Energy Efficiency                         |        |              | 4.9                       |
-| Home Device 0 aroTHERM plus Consumed Electrical Energy Cooling                | Wh     | energy       | 0.0                       |
-| Home Device 0 aroTHERM plus Consumed Electrical Energy Domestic Hot Water     | Wh     | energy       | 3000.0                    |
-| Home Device 0 aroTHERM plus Consumed Electrical Energy Heating                | Wh     | energy       | 4000.0                    |
-| Home Device 0 aroTHERM plus Earned Environment Energy Cooling                 | Wh     | energy       | 0.0                       |
-| Home Device 0 aroTHERM plus Earned Environment Energy Domestic Hot Water      | Wh     | energy       | 9000.0                    |
-| Home Device 0 aroTHERM plus Earned Environment Energy Heating                 | Wh     | energy       | 18000.0                   |
-| Home Device 0 aroTHERM plus Heat Generated Heating                            | Wh     | energy       | 22000.0                   |
-| Home Device 0 aroTHERM plus Heat Generated Domestic Hot Water                 | Wh     | energy       | 12000.0                   |
-| Home Device 0 aroTHERM plus Heat Generated Cooling                            | Wh     | energy       | 0.0                       |
-| Home Device 1 Hydraulic Station Heating Energy Efficiency                     |        |              | unknown                   |
-| Home Device 1 Hydraulic Station Consumed Electrical Energy Domestic Hot Water | Wh     | energy       | 0.0                       |
-| Home Device 1 Hydraulic Station Consumed Electrical Energy Heating            | Wh     | energy       | 0.0                       |
-| Home Away Mode                                                                |        |              | off                       |
-| Home EEBUS                                                                    |        |              | on                        |
-| Home Manual Cooling                                                           |        |              | off                       |
-| Home Domestic Hot Water 0 Boost                                               |        |              | off                       |
-| Home Zone 1 (Circuit 0) Ventilation Boost                                     |        |              | off                       |
-| Home Domestic Hot Water 0                                                     |        |              | Time Controlled           |
-
-# Services
-
-There are custom services for almost every functionality of the myVAILLANT app:
-
-| Name                                                                                                                                                          | Description                                                                     | Target       | Fields                                      |
-|:--------------------------------------------------------------------------------------------------------------------------------------------------------------|:--------------------------------------------------------------------------------|:-------------|:--------------------------------------------|
-| [Set quick veto](https://my.home-assistant.io/redirect/developer_call_service/?service=myVaillant.set_quick_veto)                                              | Sets quick veto temperature with optional duration                              | climate      | Temperature, Duration                       |
-| [Set manual mode setpoint](https://my.home-assistant.io/redirect/developer_call_service/?service=myVaillant.set_manual_mode_setpoint)                          | Sets temperature for manual mode                                                | climate      | Temperature, Type                           |
-| [Cancel quick veto](https://my.home-assistant.io/redirect/developer_call_service/?service=myVaillant.cancel_quick_veto)                                        | Cancels quick veto temperature and returns to normal schedule / manual setpoint | climate      |                                             |
-| [Set holiday](https://my.home-assistant.io/redirect/developer_call_service/?service=myVaillant.set_holiday)                                                    | Set holiday / away mode with start / end or duration                            | climate      | Start Date, End Date, Duration              |
-| [Cancel Holiday](https://my.home-assistant.io/redirect/developer_call_service/?service=myVaillant.cancel_holiday)                                              | Cancel holiday / away mode                                                      | climate      |                                             |
-| [Set Zone Time Program](https://my.home-assistant.io/redirect/developer_call_service/?service=myVaillant.set_zone_time_program)                                | Updates the time program for a zone                                             | climate      | Type, Time Program                          |
-| [Set Water Heater Time Program](https://my.home-assistant.io/redirect/developer_call_service/?service=myVaillant.set_dhw_time_program)                         | Updates the time program for a water heater                                     | water_heater | Time Program                                |
-| [Set Water Heater Circulation Time Program](https://my.home-assistant.io/redirect/developer_call_service/?service=myVaillant.set_dhw_circulation_time_program) | Updates the time program for the circulation pump of a water heater             | water_heater | Time Program                                |
-| [Export Data](https://my.home-assistant.io/redirect/developer_call_service/?service=myVaillant.export)                                                         | Exports data from the myVaillant library                                         |              | Data, Data Resolution, Start Date, End Date |
-| [Generate Test Data](https://my.home-assistant.io/redirect/developer_call_service/?service=myVaillant.generate_test_data)                                      | Generates test data for the myVaillant library and returns it as YAML            |              |                                             |
-| [Export Yearly Energy Reports](https://my.home-assistant.io/redirect/developer_call_service/?service=myVaillant.report)                                        | Exports energy reports in CSV format per year                                   |              | Year                                        |
-
-Additionally, there are home assistant's built in services for climate controls, water heaters, and switches.
-
-Search for "myvaillant" in Developer Tools > Services in your Home Assistant instance to get the full list plus an
-interactive UI.
-
-[![Open your Home Assistant instance and show your service developer tools with a specific service selected.](https://my.home-assistant.io/badges/developer_call_service.svg)](https://my.home-assistant.io/redirect/developer_call_service/?service=myVaillant.set_holiday)
-
-# Contributing
-
-See the docs on contributing
-
-## Debugging
+# Debugging
 
 When debugging or reporting issues, turn on debug logging by adding this to your `configuration.yaml`
 and restarting Home Assistant:
@@ -216,7 +120,3 @@ logger:
     custom_components.VaillantCloud: debug
     myVaillant: debug
 ```
-
-## Contributing to the underlying myVaillant library
-
-See the section on the contributing docs
