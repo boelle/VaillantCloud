@@ -7,7 +7,7 @@ from homeassistant.helpers.entity_registry import DATA_REGISTRY, EntityRegistry
 from homeassistant.loader import DATA_COMPONENTS, DATA_INTEGRATIONS
 
 from custom_components.VaillantCloud.const import DOMAIN
-from myVaillant.api import MyPyllantAPI
+from myVaillant.api import MyVaillantAPI
 from myVaillant.tests.generate_test_data import DATA_DIR
 from myVaillant.tests.utils import list_test_data, load_test_data
 
@@ -25,7 +25,7 @@ from tests.utils import get_config_entry
 async def test_async_setup_calendar(
     hass,
     myvaillant_aioresponses,
-    mocked_api: MyPyllantAPI,
+    mocked_api: MyVaillantAPI,
     system_coordinator_mock,
     test_data,
 ):
@@ -51,7 +51,7 @@ async def test_async_setup_calendar(
 async def test_zone_heating_calendar(
     hass,
     myvaillant_aioresponses,
-    mocked_api: MyPyllantAPI,
+    mocked_api: MyVaillantAPI,
     system_coordinator_mock,
     test_data,
 ):
@@ -80,7 +80,7 @@ async def test_zone_heating_calendar(
 async def test_dhw_calendar(
     hass,
     myvaillant_aioresponses,
-    mocked_api: MyPyllantAPI,
+    mocked_api: MyVaillantAPI,
     system_coordinator_mock,
     test_data,
 ):
@@ -118,7 +118,7 @@ async def test_dhw_calendar(
 async def test_dhw_circulation_calendar(
     hass,
     myvaillant_aioresponses,
-    mocked_api: MyPyllantAPI,
+    mocked_api: MyVaillantAPI,
     system_coordinator_mock,
 ):
     test_data = load_test_data(DATA_DIR / "vrc700_dhw.yaml")
@@ -141,7 +141,7 @@ async def test_dhw_circulation_calendar(
 async def test_dhw_no_circulation_calendar(
     hass,
     myvaillant_aioresponses,
-    mocked_api: MyPyllantAPI,
+    mocked_api: MyVaillantAPI,
     system_coordinator_mock,
 ):
     test_data = load_test_data(DATA_DIR / "heatpump_cooling")
@@ -164,7 +164,7 @@ async def test_dhw_no_circulation_calendar(
 async def test_ambisense_calendar(
     hass,
     myvaillant_aioresponses,
-    mocked_api: MyPyllantAPI,
+    mocked_api: MyVaillantAPI,
     system_coordinator_mock,
 ):
     test_data = load_test_data(DATA_DIR / "ambisense")

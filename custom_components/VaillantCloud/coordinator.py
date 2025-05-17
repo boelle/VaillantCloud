@@ -30,20 +30,20 @@ from custom_components.VaillantCloud.const import (
     DEFAULT_FETCH_EEBUS,
 )
 from custom_components.VaillantCloud.utils import is_quota_exceeded_exception
-from myVaillant.api import MyPyllantAPI
+from myVaillant.api import MyVaillantAPI
 from myVaillant.enums import DeviceDataBucketResolution
 from myVaillant.models import System, DeviceData
 
 _LOGGER = logging.getLogger(__name__)
 
 
-class MyPyllantCoordinator(DataUpdateCoordinator):
-    api: MyPyllantAPI
+class MyVaillantCoordinator(DataUpdateCoordinator):
+    api: MyVaillantAPI
 
     def __init__(
         self,
         hass: HomeAssistant,
-        api: MyPyllantAPI,
+        api: MyVaillantAPI,
         entry: ConfigEntry,
         update_interval: timedelta | None,
     ) -> None:
@@ -193,7 +193,7 @@ class MyPyllantCoordinator(DataUpdateCoordinator):
                 ) from self._quota_exc_info
 
 
-class SystemCoordinator(MyPyllantCoordinator):
+class SystemCoordinator(MyVaillantCoordinator):
     data: list[System]  # type: ignore
 
     async def _async_update_data(self) -> list[System]:  # type: ignore
@@ -239,7 +239,7 @@ class SystemWithDeviceData(TypedDict):
     devices_data: list[list[DeviceData]]
 
 
-class DailyDataCoordinator(MyPyllantCoordinator):
+class DailyDataCoordinator(MyVaillantCoordinator):
     data: dict[str, SystemWithDeviceData]
 
     async def is_sensor_disabled(self, unique_id: str) -> bool:

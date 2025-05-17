@@ -7,7 +7,7 @@ from custom_components.VaillantCloud.coordinator import (
     SystemCoordinator,
     DailyDataCoordinator,
 )
-from myVaillant.api import MyPyllantAPI
+from myVaillant.api import MyVaillantAPI
 from myVaillant.const import DEFAULT_BRAND
 from myVaillant.models import Circuit, DomesticHotWater, System, Zone
 from myVaillant.tests.utils import _mocked_api, _myvaillant_aioresponses
@@ -79,7 +79,7 @@ def myvaillant_aioresponses():
 
 
 @pytest.fixture
-async def mocked_api() -> MyPyllantAPI:
+async def mocked_api() -> MyVaillantAPI:
     return await _mocked_api()
 
 

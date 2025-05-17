@@ -1,13 +1,13 @@
 from custom_components.VaillantCloud import SystemCoordinator
 from custom_components.VaillantCloud.number import SystemManualCoolingDays
-from myVaillant.api import MyPyllantAPI
+from myVaillant.api import MyVaillantAPI
 from myVaillant.tests.generate_test_data import DATA_DIR
 from myVaillant.tests.utils import load_test_data
 
 
 async def test_manual_cooling_days(
     myvaillant_aioresponses,
-    mocked_api: MyPyllantAPI,
+    mocked_api: MyVaillantAPI,
     system_coordinator_mock: SystemCoordinator,
 ):
     test_data = load_test_data(DATA_DIR / "ventilation")

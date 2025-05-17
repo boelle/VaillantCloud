@@ -2,7 +2,7 @@ import pytest as pytest
 from homeassistant.helpers.entity_registry import DATA_REGISTRY, EntityRegistry
 from homeassistant.loader import DATA_COMPONENTS, DATA_INTEGRATIONS
 
-from myVaillant.api import MyPyllantAPI
+from myVaillant.api import MyVaillantAPI
 from myVaillant.models import DeviceData
 from myVaillant.enums import CircuitState
 from myVaillant.tests.generate_test_data import DATA_DIR
@@ -41,7 +41,7 @@ from tests.utils import get_config_entry
 async def test_create_system_sensors(
     hass,
     myvaillant_aioresponses,
-    mocked_api: MyPyllantAPI,
+    mocked_api: MyVaillantAPI,
     system_coordinator_mock,
     test_data,
 ):
@@ -64,7 +64,7 @@ async def test_create_system_sensors(
 
 @pytest.mark.parametrize("test_data", list_test_data())
 async def test_system_sensors(
-    myvaillant_aioresponses, mocked_api: MyPyllantAPI, system_coordinator_mock, test_data
+    myvaillant_aioresponses, mocked_api: MyVaillantAPI, system_coordinator_mock, test_data
 ):
     with myvaillant_aioresponses(test_data) as _:
         system_coordinator_mock.data = (
@@ -93,7 +93,7 @@ async def test_system_sensors(
 async def test_zone_sensors(
     hass,
     myvaillant_aioresponses,
-    mocked_api: MyPyllantAPI,
+    mocked_api: MyVaillantAPI,
     system_coordinator_mock,
 ):
     test_data = load_test_data(DATA_DIR / "heatpump_cooling")
@@ -133,7 +133,7 @@ async def test_zone_sensors(
 
 @pytest.mark.parametrize("test_data", list_test_data())
 async def test_circuit_sensors(
-    myvaillant_aioresponses, mocked_api: MyPyllantAPI, system_coordinator_mock, test_data
+    myvaillant_aioresponses, mocked_api: MyVaillantAPI, system_coordinator_mock, test_data
 ):
     with myvaillant_aioresponses(test_data) as _:
         system_coordinator_mock.data = (
@@ -169,7 +169,7 @@ async def test_circuit_sensors(
 async def test_domestic_hot_water_sensor(
     hass,
     myvaillant_aioresponses,
-    mocked_api: MyPyllantAPI,
+    mocked_api: MyVaillantAPI,
     system_coordinator_mock,
     test_data,
 ):
@@ -211,7 +211,7 @@ async def test_domestic_hot_water_sensor(
 @pytest.mark.parametrize("test_data", list_test_data())
 async def test_data_sensor(
     myvaillant_aioresponses,
-    mocked_api: MyPyllantAPI,
+    mocked_api: MyVaillantAPI,
     daily_data_coordinator_mock,
     test_data,
 ):
@@ -242,7 +242,7 @@ async def test_data_sensor(
 
 async def test_device_sensor(
     myvaillant_aioresponses,
-    mocked_api: MyPyllantAPI,
+    mocked_api: MyVaillantAPI,
     system_coordinator_mock,
 ):
     test_data = load_test_data(DATA_DIR / "vrc700_mpc_rts.yaml")
@@ -267,7 +267,7 @@ async def test_device_sensor(
 
 async def test_additional_system_sensors(
     myvaillant_aioresponses,
-    mocked_api: MyPyllantAPI,
+    mocked_api: MyVaillantAPI,
     system_coordinator_mock,
 ):
     test_data = load_test_data(DATA_DIR / "two_systems")

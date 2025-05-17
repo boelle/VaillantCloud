@@ -17,7 +17,7 @@ from homeassistant.helpers.template import as_datetime
 
 from myVaillant import export, report
 
-from myVaillant.api import MyPyllantAPI
+from myVaillant.api import MyVaillantAPI
 from myVaillant.const import DEFAULT_BRAND
 from myVaillant.enums import DeviceDataBucketResolution
 from myVaillant.http_client import (
@@ -102,7 +102,7 @@ async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
     hass.data[DOMAIN][entry.entry_id] = {}
 
     _LOGGER.debug("Creating API and logging in with %s in realm %s", username, country)
-    api = MyPyllantAPI(
+    api = MyVaillantAPI(
         username=username, password=password, brand=brand, country=country
     )
     try:

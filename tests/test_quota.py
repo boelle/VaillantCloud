@@ -6,7 +6,7 @@ from aiohttp import RequestInfo
 from aiohttp.client_exceptions import ClientResponseError
 from freezegun import freeze_time
 from homeassistant.helpers.update_coordinator import UpdateFailed
-from myVaillant.api import MyPyllantAPI
+from myVaillant.api import MyVaillantAPI
 from myVaillant.tests.utils import list_test_data
 
 from custom_components.VaillantCloud.const import (
@@ -16,7 +16,7 @@ from custom_components.VaillantCloud.const import (
 
 
 async def test_quota(
-    myvaillant_aioresponses, mocked_api: MyPyllantAPI, system_coordinator_mock
+    myvaillant_aioresponses, mocked_api: MyVaillantAPI, system_coordinator_mock
 ):
     # Trigger quota error in the past and check that it raises an exception
     quota_exception = ClientResponseError(
@@ -57,7 +57,7 @@ async def test_quota(
 
 
 async def test_api_down(
-    myvaillant_aioresponses, mocked_api: MyPyllantAPI, system_coordinator_mock
+    myvaillant_aioresponses, mocked_api: MyVaillantAPI, system_coordinator_mock
 ):
     # Trigger API down error and check that it raises an exception
     with myvaillant_aioresponses(raise_exception=CancelledError()) as _:

@@ -6,7 +6,7 @@ from homeassistant.helpers.entity_registry import DATA_REGISTRY, EntityRegistry
 from homeassistant.loader import DATA_COMPONENTS, DATA_INTEGRATIONS
 
 from custom_components.VaillantCloud.const import DOMAIN
-from myVaillant.api import MyPyllantAPI
+from myVaillant.api import MyVaillantAPI
 from myVaillant.enums import DHWOperationMode
 from myVaillant.tests.utils import list_test_data
 
@@ -21,7 +21,7 @@ from tests.utils import get_config_entry
 async def test_async_setup_water_heater(
     hass,
     myvaillant_aioresponses,
-    mocked_api: MyPyllantAPI,
+    mocked_api: MyVaillantAPI,
     system_coordinator_mock,
     test_data,
 ):
@@ -55,7 +55,7 @@ async def test_async_setup_water_heater(
 
 @pytest.mark.parametrize("test_data", list_test_data())
 async def test_water_heater(
-    myvaillant_aioresponses, mocked_api: MyPyllantAPI, system_coordinator_mock, test_data
+    myvaillant_aioresponses, mocked_api: MyVaillantAPI, system_coordinator_mock, test_data
 ):
     with myvaillant_aioresponses(test_data) as _:
         system_coordinator_mock.data = (

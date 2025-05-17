@@ -8,7 +8,7 @@ from homeassistant.exceptions import ServiceValidationError
 from homeassistant.helpers.entity_registry import DATA_REGISTRY, EntityRegistry
 from homeassistant.loader import DATA_COMPONENTS, DATA_INTEGRATIONS
 
-from myVaillant.api import MyPyllantAPI
+from myVaillant.api import MyVaillantAPI
 from myVaillant.tests.generate_test_data import DATA_DIR
 from myVaillant.tests.utils import list_test_data, load_test_data
 
@@ -28,7 +28,7 @@ from tests.utils import get_config_entry
 async def test_async_setup_climate(
     hass,
     myvaillant_aioresponses,
-    mocked_api: MyPyllantAPI,
+    mocked_api: MyVaillantAPI,
     system_coordinator_mock,
     test_data,
 ):
@@ -57,7 +57,7 @@ async def test_async_setup_climate(
 @pytest.mark.parametrize("test_data", list_test_data())
 async def test_zone_climate(
     myvaillant_aioresponses,
-    mocked_api: MyPyllantAPI,
+    mocked_api: MyVaillantAPI,
     system_coordinator_mock: SystemCoordinator,
     test_data,
 ):
@@ -100,7 +100,7 @@ async def test_zone_climate(
 
 async def test_ventilation_climate(
     myvaillant_aioresponses,
-    mocked_api: MyPyllantAPI,
+    mocked_api: MyVaillantAPI,
     system_coordinator_mock: SystemCoordinator,
 ):
     test_data_files = ["ventilation", "vrc700_ventilation.yaml"]
@@ -127,7 +127,7 @@ async def test_ventilation_climate(
 
 async def test_ambisense_climate(
     myvaillant_aioresponses,
-    mocked_api: MyPyllantAPI,
+    mocked_api: MyVaillantAPI,
     system_coordinator_mock: SystemCoordinator,
 ):
     test_data_files = ["ambisense", "ambisense2.yaml"]

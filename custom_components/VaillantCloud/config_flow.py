@@ -10,7 +10,7 @@ from homeassistant.data_entry_flow import FlowResult, AbortFlow
 from homeassistant.helpers import selector
 from homeassistant.helpers.config_validation import positive_int
 from myVaillant.api import (
-    MyPyllantAPI,
+    MyVaillantAPI,
 )
 from myVaillant.http_client import (
     AuthenticationFailed,
@@ -162,7 +162,7 @@ OPTIONS_SCHEMA = vol.Schema(
 
 
 async def validate_input(hass: HomeAssistant, data: dict) -> str:
-    async with MyPyllantAPI(**data) as api:
+    async with MyVaillantAPI(**data) as api:
         await api.login()
         return data["username"].lower()
 

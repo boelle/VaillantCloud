@@ -17,7 +17,7 @@ from custom_components.VaillantCloud.const import (
     SERVICE_EXPORT,
     DOMAIN,
 )
-from myVaillant.api import MyPyllantAPI
+from myVaillant.api import MyVaillantAPI
 from myVaillant.models import RoomTimeProgram
 from myVaillant.tests.generate_test_data import DATA_DIR
 from myVaillant.tests.utils import list_test_data, load_test_data
@@ -38,7 +38,7 @@ def setup_hass_for_service_test(hass):
 async def test_service_generate_test_data(
     hass,
     myvaillant_aioresponses,
-    mocked_api: MyPyllantAPI,
+    mocked_api: MyVaillantAPI,
     system_coordinator_mock,
     test_data,
 ):
@@ -67,7 +67,7 @@ async def test_service_generate_test_data(
 async def test_service_export(
     hass,
     myvaillant_aioresponses,
-    mocked_api: MyPyllantAPI,
+    mocked_api: MyVaillantAPI,
     system_coordinator_mock,
     test_data,
 ):
@@ -102,7 +102,7 @@ async def test_service_export(
 
 async def test_ambisense_time_program(
     myvaillant_aioresponses,
-    mocked_api: MyPyllantAPI,
+    mocked_api: MyVaillantAPI,
     system_coordinator_mock: SystemCoordinator,
 ) -> None:
     test_data_files = ["ambisense", "ambisense2.yaml"]
