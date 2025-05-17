@@ -17,7 +17,7 @@ from Saunier Duval & Bulex).
 * [Discussion on Home Assistant Community](https://community.home-assistant.io/t/myvaillant-integration/542610)
 * [myVaillant Python library](https://github.com/rmalbrecht/myVaillant)
 
-> [!REMARK] 
+> [!IMPORTANT] 
 > This integration uses the API which is developed by Vaillant for it's myVaillant App. The API therefore supports only what the app needs.
 > If an information is not present in the app, it will also not be present in the API.
 > If a function is not supported by the app, it will also not be supported in the API.
