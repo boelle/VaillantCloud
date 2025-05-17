@@ -13,15 +13,16 @@ from Saunier Duval & Bulex).
 
 [![VaillantCloud](https://github.com/user-attachments/assets/665fd059-7516-42ed-afea-e95c43a70883)]
 
-* [Documentation](https://github.com/rmalbrecht/VaillantCloud/wiki)
-* [Discussion on Home Assistant Community](https://community.home-assistant.io/t/myvaillant-integration/542610)
-* [myVaillant Python library](https://github.com/rmalbrecht/myVaillant)
-
 > [!IMPORTANT] 
 > This integration uses the API which is developed by Vaillant for it's myVaillant App. The API therefore supports only what the app needs.
 > If an information is not present in the app, it will also not be present in the API.
 > If a function is not supported by the app, it will also not be supported in the API.
 > This API is not scoped for smart home control, ... 
+
+> [!NOTE]
+> There many many different setups and products from Vaillant. Without manufacturer documentation or support it's impossible to test every single installation.
+> If something is not working in your installation: happy to accept a pull request with the fix. Otherwise, not much can be done.
+
 
 # Tested Setups
 
