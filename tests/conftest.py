@@ -3,17 +3,17 @@ from unittest import mock
 
 import pytest
 
-from custom_components.mypyllant.coordinator import (
+from custom_components.myvaillant.coordinator import (
     SystemCoordinator,
     DailyDataCoordinator,
 )
 from myVaillant.api import MyVaillantAPI
 from myVaillant.const import DEFAULT_BRAND
 from myVaillant.models import Circuit, DomesticHotWater, System, Zone
-from myVaillant.tests.utils import _mocked_api, _mypyllant_aioresponses
+from myVaillant.tests.utils import _mocked_api, _myvaillant_aioresponses
 from polyfactory.factories import DataclassFactory
 
-from custom_components.mypyllant.const import (
+from custom_components.myvaillant.const import (
     DEFAULT_COUNTRY,
     DOMAIN,
     OPTION_BRAND,
@@ -74,8 +74,8 @@ class DomesticHotWaterFactory(DataclassFactory):
 
 
 @pytest.fixture
-def mypyllant_aioresponses():
-    return _mypyllant_aioresponses()
+def myvaillant_aioresponses():
+    return _myvaillant_aioresponses()
 
 
 @pytest.fixture
