@@ -106,7 +106,7 @@ With debugging enabled, there's a chance to find the culprit in the data returne
 
 ## Vaillant Load Limits
 
-To protect their API Vaillant has employed load limits. While the excact limits are unkown, there more app-installtions and the more often Home Assistant polls the information, the faster you will hit the limit. Nothing can be done here.
+To protect their API Vaillant has employed load limits. While the exact limits are unknown, there more app-installtions you have and the more often Home Assistant polls the information, the faster you will hit the limit. Nothing can be done here.
 
 # Debugging
 
