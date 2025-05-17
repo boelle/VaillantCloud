@@ -17,11 +17,11 @@ from custom_components.VaillantCloud.const import (
     OPTION_DEFAULT_MANUAL_COOLING_DURATION,
     DEFAULT_MANUAL_COOLING_DURATION,
 )
-from myPyllant.const import DEFAULT_HOLIDAY_DURATION
+from myVaillant.const import DEFAULT_HOLIDAY_DURATION
 
 if typing.TYPE_CHECKING:
     from custom_components.VaillantCloud.coordinator import SystemCoordinator
-    from myPyllant.models import (
+    from myVaillant.models import (
         System,
         DomesticHotWater,
         Zone,

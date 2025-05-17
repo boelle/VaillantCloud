@@ -2,11 +2,11 @@ import pytest as pytest
 from homeassistant.helpers.entity_registry import DATA_REGISTRY, EntityRegistry
 from homeassistant.loader import DATA_COMPONENTS, DATA_INTEGRATIONS
 
-from myPyllant.api import MyPyllantAPI
-from myPyllant.models import DeviceData
-from myPyllant.enums import CircuitState
-from myPyllant.tests.generate_test_data import DATA_DIR
-from myPyllant.tests.utils import list_test_data, load_test_data
+from myVaillant.api import MyPyllantAPI
+from myVaillant.models import DeviceData
+from myVaillant.enums import CircuitState
+from myVaillant.tests.generate_test_data import DATA_DIR
+from myVaillant.tests.utils import list_test_data, load_test_data
 
 from custom_components.VaillantCloud.sensor import (
     CircuitFlowTemperatureSensor,
@@ -40,7 +40,7 @@ from tests.utils import get_config_entry
 @pytest.mark.parametrize("test_data", list_test_data())
 async def test_create_system_sensors(
     hass,
-    mypyllant_aioresponses,
+    myvaillant_aioresponses,
     mocked_api: MyPyllantAPI,
     system_coordinator_mock,
     test_data,
@@ -48,7 +48,7 @@ async def test_create_system_sensors(
     hass.data[DATA_COMPONENTS] = {}
     hass.data[DATA_INTEGRATIONS] = {}
     hass.data[DATA_REGISTRY] = EntityRegistry(hass)
-    with mypyllant_aioresponses(test_data) as _:
+    with myvaillant_aioresponses(test_data) as _:
         config_entry = get_config_entry()
         system_coordinator_mock.data = (
             await system_coordinator_mock._async_update_data()
@@ -64,9 +64,9 @@ async def test_create_system_sensors(
 
 @pytest.mark.parametrize("test_data", list_test_data())
 async def test_system_sensors(
-    mypyllant_aioresponses, mocked_api: MyPyllantAPI, system_coordinator_mock, test_data
+    myvaillant_aioresponses, mocked_api: MyPyllantAPI, system_coordinator_mock, test_data
 ):
-    with mypyllant_aioresponses(test_data) as _:
+    with myvaillant_aioresponses(test_data) as _:
         system_coordinator_mock.data = (
             await system_coordinator_mock._async_update_data()
         )
@@ -92,12 +92,12 @@ async def test_system_sensors(
 
 async def test_zone_sensors(
     hass,
-    mypyllant_aioresponses,
+    myvaillant_aioresponses,
     mocked_api: MyPyllantAPI,
     system_coordinator_mock,
 ):
     test_data = load_test_data(DATA_DIR / "heatpump_cooling")
-    with mypyllant_aioresponses(test_data) as _:
+    with myvaillant_aioresponses(test_data) as _:
         system_coordinator_mock.data = (
             await system_coordinator_mock._async_update_data()
         )
@@ -133,9 +133,9 @@ async def test_zone_sensors(
 
 @pytest.mark.parametrize("test_data", list_test_data())
 async def test_circuit_sensors(
-    mypyllant_aioresponses, mocked_api: MyPyllantAPI, system_coordinator_mock, test_data
+    myvaillant_aioresponses, mocked_api: MyPyllantAPI, system_coordinator_mock, test_data
 ):
-    with mypyllant_aioresponses(test_data) as _:
+    with myvaillant_aioresponses(test_data) as _:
         system_coordinator_mock.data = (
             await system_coordinator_mock._async_update_data()
         )
@@ -168,12 +168,12 @@ async def test_circuit_sensors(
 @pytest.mark.parametrize("test_data", list_test_data())
 async def test_domestic_hot_water_sensor(
     hass,
-    mypyllant_aioresponses,
+    myvaillant_aioresponses,
     mocked_api: MyPyllantAPI,
     system_coordinator_mock,
     test_data,
 ):
-    with mypyllant_aioresponses(test_data) as _:
+    with myvaillant_aioresponses(test_data) as _:
         system_coordinator_mock.data = (
             await system_coordinator_mock._async_update_data()
         )
@@ -210,12 +210,12 @@ async def test_domestic_hot_water_sensor(
 
 @pytest.mark.parametrize("test_data", list_test_data())
 async def test_data_sensor(
-    mypyllant_aioresponses,
+    myvaillant_aioresponses,
     mocked_api: MyPyllantAPI,
     daily_data_coordinator_mock,
     test_data,
 ):
-    with mypyllant_aioresponses(test_data) as _:
+    with myvaillant_aioresponses(test_data) as _:
         daily_data_coordinator_mock.data = (
             await daily_data_coordinator_mock._async_update_data()
         )
@@ -241,12 +241,12 @@ async def test_data_sensor(
 
 
 async def test_device_sensor(
-    mypyllant_aioresponses,
+    myvaillant_aioresponses,
     mocked_api: MyPyllantAPI,
     system_coordinator_mock,
 ):
     test_data = load_test_data(DATA_DIR / "vrc700_mpc_rts.yaml")
-    with mypyllant_aioresponses(test_data) as _:
+    with myvaillant_aioresponses(test_data) as _:
         system_coordinator_mock.data = (
             await system_coordinator_mock._async_update_data()
         )
@@ -266,12 +266,12 @@ async def test_device_sensor(
 
 
 async def test_additional_system_sensors(
-    mypyllant_aioresponses,
+    myvaillant_aioresponses,
     mocked_api: MyPyllantAPI,
     system_coordinator_mock,
 ):
     test_data = load_test_data(DATA_DIR / "two_systems")
-    with mypyllant_aioresponses(test_data) as _:
+    with myvaillant_aioresponses(test_data) as _:
         system_coordinator_mock.data = (
             await system_coordinator_mock._async_update_data()
         )

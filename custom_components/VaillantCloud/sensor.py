@@ -22,7 +22,7 @@ from homeassistant.core import HomeAssistant, callback
 from homeassistant.helpers.entity import DeviceInfo, EntityCategory
 from homeassistant.helpers.entity_platform import AddEntitiesCallback
 from homeassistant.helpers.update_coordinator import CoordinatorEntity
-from myPyllant.models import (
+from myVaillant.models import (
     Circuit,
     Device,
     DeviceData,
@@ -35,7 +35,7 @@ from custom_components.VaillantCloud.utils import (
     ZoneCoordinatorEntity,
     EntityList,
 )
-from myPyllant.utils import prepare_field_value_for_dict
+from myVaillant.utils import prepare_field_value_for_dict
 
 from . import DailyDataCoordinator, SystemCoordinator
 from .const import DOMAIN

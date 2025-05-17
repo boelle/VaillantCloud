@@ -7,9 +7,9 @@ from homeassistant import data_entry_flow
 from homeassistant.config_entries import SOURCE_USER
 from homeassistant.core import HomeAssistant
 
-from myPyllant.api import MyPyllantAPI
-from myPyllant.tests.generate_test_data import DATA_DIR
-from myPyllant.tests.utils import load_test_data
+from myVaillant.api import MyPyllantAPI
+from myVaillant.tests.generate_test_data import DATA_DIR
+from myVaillant.tests.utils import load_test_data
 
 from custom_components.VaillantCloud.const import DOMAIN
 from custom_components.VaillantCloud import async_setup_entry, async_unload_entry
@@ -58,17 +58,17 @@ async def test_user_flow_minimum_fields(hass: HomeAssistant):
 
 async def test_async_setup(
     hass,
-    mypyllant_aioresponses,
+    myvaillant_aioresponses,
     mocked_api: MyPyllantAPI,
 ):
     test_data = load_test_data(DATA_DIR / "heatpump_heat_curve")
-    with mypyllant_aioresponses(test_data) as _:
+    with myvaillant_aioresponses(test_data) as _:
         config_entry = get_config_entry()
         config_entry.add_to_hass(hass)
         await hass.config_entries.async_setup(config_entry.entry_id)
         await hass.async_block_till_done()
 
-        mock.patch("myPyllant.api.MyPyllantAPI", mocked_api)
+        mock.patch("myVaillant.api.MyPyllantAPI", mocked_api)
         result = await async_setup_entry(hass, config_entry)
         assert result, "Component did not setup successfully"
 

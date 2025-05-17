@@ -18,8 +18,8 @@ from custom_components.VaillantCloud.utils import (
     ZoneCoordinatorEntity,
     SystemCoordinatorEntity,
 )
-from myPyllant.enums import ZoneCurrentSpecialFunction
-from myPyllant.utils import get_default_holiday_dates
+from myVaillant.enums import ZoneCurrentSpecialFunction
+from myVaillant.utils import get_default_holiday_dates
 
 _LOGGER = logging.getLogger(__name__)
 

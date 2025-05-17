@@ -6,9 +6,9 @@ from homeassistant.helpers.entity_registry import DATA_REGISTRY, EntityRegistry
 from homeassistant.loader import DATA_COMPONENTS, DATA_INTEGRATIONS
 
 from custom_components.VaillantCloud.const import DOMAIN
-from myPyllant.api import MyPyllantAPI
-from myPyllant.enums import DHWOperationMode
-from myPyllant.tests.utils import list_test_data
+from myVaillant.api import MyPyllantAPI
+from myVaillant.enums import DHWOperationMode
+from myVaillant.tests.utils import list_test_data
 
 from custom_components.VaillantCloud.water_heater import (
     DomesticHotWaterEntity,
@@ -20,7 +20,7 @@ from tests.utils import get_config_entry
 @pytest.mark.parametrize("test_data", list_test_data())
 async def test_async_setup_water_heater(
     hass,
-    mypyllant_aioresponses,
+    myvaillant_aioresponses,
     mocked_api: MyPyllantAPI,
     system_coordinator_mock,
     test_data,
@@ -28,7 +28,7 @@ async def test_async_setup_water_heater(
     hass.data[DATA_COMPONENTS] = {}
     hass.data[DATA_INTEGRATIONS] = {}
     hass.data[DATA_REGISTRY] = EntityRegistry(hass)
-    with mypyllant_aioresponses(test_data) as _:
+    with myvaillant_aioresponses(test_data) as _:
         config_entry = get_config_entry()
         system_coordinator_mock.data = (
             await system_coordinator_mock._async_update_data()
@@ -55,9 +55,9 @@ async def test_async_setup_water_heater(
 
 @pytest.mark.parametrize("test_data", list_test_data())
 async def test_water_heater(
-    mypyllant_aioresponses, mocked_api: MyPyllantAPI, system_coordinator_mock, test_data
+    myvaillant_aioresponses, mocked_api: MyPyllantAPI, system_coordinator_mock, test_data
 ):
-    with mypyllant_aioresponses(test_data) as _:
+    with myvaillant_aioresponses(test_data) as _:
         system_coordinator_mock.data = (
             await system_coordinator_mock._async_update_data()
         )

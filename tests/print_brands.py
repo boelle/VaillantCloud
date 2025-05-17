@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-from myPyllant.const import BRANDS, COUNTRIES
+from myVaillant.const import BRANDS, COUNTRIES
 
 
 def main():

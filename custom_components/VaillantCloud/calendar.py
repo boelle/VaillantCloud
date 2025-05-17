@@ -17,7 +17,7 @@ from homeassistant.core import HomeAssistant
 from homeassistant.exceptions import HomeAssistantError
 from homeassistant.helpers.entity_platform import AddEntitiesCallback
 
-from myPyllant.models import (
+from myVaillant.models import (
     ZoneTimeProgramDay,
     BaseTimeProgram,
     BaseTimeProgramDay,
@@ -28,7 +28,7 @@ from myPyllant.models import (
     RoomTimeProgram,
     System,
 )
-from myPyllant.enums import ZoneOperatingType
+from myVaillant.enums import ZoneOperatingType
 
 from . import SystemCoordinator
 from .const import DOMAIN, WEEKDAYS_TO_RFC5545, RFC5545_TO_WEEKDAYS

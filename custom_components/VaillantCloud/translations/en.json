@@ -48,7 +48,7 @@
   },
   "entity": {
     "climate": {
-      "mypyllant_zone": {
+      "myvaillant_zone": {
         "state_attributes": {
           "preset_mode": {
             "state": {

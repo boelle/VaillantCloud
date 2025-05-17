@@ -7,10 +7,10 @@ from custom_components.VaillantCloud.coordinator import (
     SystemCoordinator,
     DailyDataCoordinator,
 )
-from myPyllant.api import MyPyllantAPI
-from myPyllant.const import DEFAULT_BRAND
-from myPyllant.models import Circuit, DomesticHotWater, System, Zone
-from myPyllant.tests.utils import _mocked_api, _mypyllant_aioresponses
+from myVaillant.api import MyPyllantAPI
+from myVaillant.const import DEFAULT_BRAND
+from myVaillant.models import Circuit, DomesticHotWater, System, Zone
+from myVaillant.tests.utils import _mocked_api, _myvaillant_aioresponses
 from polyfactory.factories import DataclassFactory
 
 from custom_components.VaillantCloud.const import (
@@ -74,8 +74,8 @@ class DomesticHotWaterFactory(DataclassFactory):
 
 
 @pytest.fixture
-def mypyllant_aioresponses():
-    return _mypyllant_aioresponses()
+def myvaillant_aioresponses():
+    return _myvaillant_aioresponses()
 
 
 @pytest.fixture

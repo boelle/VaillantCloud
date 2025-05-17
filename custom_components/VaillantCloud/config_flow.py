@@ -9,15 +9,15 @@ from homeassistant.core import HomeAssistant, callback
 from homeassistant.data_entry_flow import FlowResult, AbortFlow
 from homeassistant.helpers import selector
 from homeassistant.helpers.config_validation import positive_int
-from myPyllant.api import (
+from myVaillant.api import (
     MyPyllantAPI,
 )
-from myPyllant.http_client import (
+from myVaillant.http_client import (
     AuthenticationFailed,
     LoginEndpointInvalid,
     RealmInvalid,
 )
-from myPyllant.const import (
+from myVaillant.const import (
     BRANDS,
     COUNTRIES,
     DEFAULT_BRAND,

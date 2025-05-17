@@ -9,8 +9,8 @@ tar zxvf /tmp/config.tar.gz -C /
 apk add --update envsubst
 envsubst < /config/.storage/core.config_entries.template > /config/.storage/core.config_entries
 # Copies custom component and library into docker (to avoid permission of mounting volumes directly)
-cp -r /tmp/myPyllant "$PYTHON_LIB_DIR"
-chattr +i -R "$PYTHON_LIB_DIR/myPyllant"
+cp -r /tmp/myVaillant "$PYTHON_LIB_DIR"
+chattr +i -R "$PYTHON_LIB_DIR/myVaillant"
 mkdir -p /config/custom_components
 cp -r /tmp/VaillantCloud-component /config/custom_components/VaillantCloud
 /init python -m homeassistant --config /config

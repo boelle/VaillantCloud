@@ -364,7 +364,7 @@ set_dhw_circulation_time_program:
 
 export:
   name: Export Data
-  description: Exports data from the mypyllant library
+  description: Exports data from the myvaillant library
   fields:
     data:
       name: Data
@@ -397,7 +397,7 @@ export:
 
 generate_test_data:
   name: Generate Test Data
-  description: Generates test data for the mypyllant library and returns it as YAML
+  description: Generates test data for the myvaillant library and returns it as YAML
 
 report:
   name: Export Yearly Energy Reports

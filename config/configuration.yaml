@@ -4,7 +4,7 @@ logger:
   default: warning
   logs:
     custom_components.VaillantCloud: debug
-    myPyllant: debug
+    myVaillant: debug
 
 debugpy:
   start: true

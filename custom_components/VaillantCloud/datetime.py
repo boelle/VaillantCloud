@@ -21,7 +21,7 @@ from custom_components.VaillantCloud.utils import (
     ManualCoolingEntity,
     DomesticHotWaterCoordinatorEntity,
 )
-from myPyllant.utils import get_default_holiday_dates
+from myVaillant.utils import get_default_holiday_dates
 
 _LOGGER = logging.getLogger(__name__)
 

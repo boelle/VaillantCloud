@@ -2,16 +2,16 @@ import re
 from pathlib import Path
 
 
-async def test_mypyllant_versions():
+async def test_myvaillant_versions():
     """
-    Make sure myPyllant library is set to the same versions in all important files
+    Make sure myVaillant library is set to the same versions in all important files
     """
     files = [
         Path(".").parent / "dev-requirements.txt",
         Path(".").parent / "custom_components/VaillantCloud/manifest.json",
     ]
-    p = re.compile(r"myPyllant==(.*?)[\"\n]")
+    p = re.compile(r"myVaillant==(.*?)[\"\n]")
     matches = [re.findall(p, f.read_text()) for f in files]
     assert all(m == matches[0] for m in matches), (
-        f"myPyllant versions are not the same in all files: {matches}"
+        f"myVaillant versions are not the same in all files: {matches}"
     )

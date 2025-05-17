@@ -30,14 +30,14 @@ from homeassistant.helpers.entity import DeviceInfo
 from homeassistant.helpers.entity_platform import AddEntitiesCallback
 from homeassistant.helpers.template import as_datetime
 from homeassistant.helpers.update_coordinator import CoordinatorEntity
-from myPyllant.const import DEFAULT_QUICK_VETO_DURATION
-from myPyllant.models import (
+from myVaillant.const import DEFAULT_QUICK_VETO_DURATION
+from myVaillant.models import (
     System,
     Zone,
     ZoneTimeProgram,
     RoomTimeProgram,
 )
-from myPyllant.enums import (
+from myVaillant.enums import (
     ZoneOperatingMode,
     ZoneOperatingModeVRC700,
     ZoneCurrentSpecialFunction,
@@ -346,7 +346,7 @@ class ZoneClimate(CoordinatorEntity, ClimateEntity):
     """Climate for a zone."""
 
     coordinator: SystemCoordinator
-    _attr_translation_key = "mypyllant_zone"
+    _attr_translation_key = "myvaillant_zone"
     _attr_temperature_unit = UnitOfTemperature.CELSIUS
     _attr_target_temperature_step = 0.5
     _enable_turn_on_off_backwards_compatibility = False
@@ -926,7 +926,7 @@ class ZoneClimate(CoordinatorEntity, ClimateEntity):
                 if requested_mode == ZoneCurrentSpecialFunction.SYSTEM_OFF:
                     # SYSTEM_OFF is a valid special function, but since there's no API endpoint we
                     # just turn off the system though the zone heating mode API.
-                    # See https://github.com/signalkraft/mypyllant-component/issues/27#issuecomment-1746568372
+                    # See https://github.com/signalkraft/myvaillant-component/issues/27#issuecomment-1746568372
                     await self.async_set_hvac_mode(HVACMode.OFF)
 
                 await self.coordinator.async_request_refresh_delayed()

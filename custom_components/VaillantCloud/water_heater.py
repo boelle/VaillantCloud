@@ -14,18 +14,18 @@ from homeassistant.helpers import entity_platform
 from homeassistant.helpers.entity import DeviceInfo
 from homeassistant.helpers.entity_platform import AddEntitiesCallback
 from homeassistant.helpers.update_coordinator import CoordinatorEntity
-from myPyllant.models import (
+from myVaillant.models import (
     DHWTimeProgram,
     DomesticHotWater,
     System,
 )
-from myPyllant.enums import (
+from myVaillant.enums import (
     DHWCurrentSpecialFunction,
     DHWOperationMode,
     DHWOperationModeVRC700,
     DHWCurrentSpecialFunctionVRC700,
 )
-from myPyllant.utils import prepare_field_value_for_dict
+from myVaillant.utils import prepare_field_value_for_dict
 
 from . import SystemCoordinator
 from .const import (
