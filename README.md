@@ -1,8 +1,8 @@
-# myPyllant Home Assistant Component
+# VaillantCloud Home Assistant Component
 
-[![GitHub Release](https://img.shields.io/github/release/signalkraft/mypyllant-component.svg)](https://github.com/signalkraft/mypyllant-component/releases)
-[![License](https://img.shields.io/github/license/signalkraft/mypyllant-component.svg)](https://github.com/signalkraft/mypyllant-component/blob/main/LICENSE)
-![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/signalkraft/mypyllant-component/build-test.yaml)
+[![GitHub Release](https://img.shields.io/github/release/rmalbrecht/VaillantCloud.svg)](https://github.com/signalkraft/VaillantCloud/releases)
+[![License](https://img.shields.io/github/license/rmalbrecht/VaillantCloud.svg)](https://github.com/rmalbrecht/VaillantCloud/blob/main/LICENSE)
+![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/rmalbrecht/VaillantCloud/build-test.yaml)
 
 Home Assistant component that interfaces with the myVAILLANT API (and branded versions of it, such as the MiGo Link app
 from Saunier Duval & Bulex).
@@ -11,11 +11,12 @@ from Saunier Duval & Bulex).
 > This integration is not affiliated with Vaillant, the developers take no responsibility for anything that happens to
 > your devices because of this library.
 
-![myPyllant](https://raw.githubusercontent.com/signalkraft/myPyllant/main/logo.png)
+[![VaillantCloud](https://github.com/user-attachments/assets/665fd059-7516-42ed-afea-e95c43a70883)]
 
-* [Documentation](https://signalkraft.com/mypyllant-component/)
+
+* [Documentation](https://github.com/rmalbrecht/VaillantCloud/wiki)
 * [Discussion on Home Assistant Community](https://community.home-assistant.io/t/myvaillant-integration/542610)
-* [myPyllant Python library](https://github.com/signalkraft/mypyllant)
+* [myVaillant Python library](https://github.com/rmalbrecht/myVaillant)
 
 ## Tested Setups
 
@@ -25,16 +26,14 @@ from Saunier Duval & Bulex).
 * Vaillant EcoCompact VSC206 4-5 boiler + Multimatic VRC700/6 + gateway VR920
 * Saunier Duval DUOMAX F30 90 + MISET Radio + MiLink V3
 * VR42 controllers are also supported
-* [More are documented here](https://signalkraft.com/mypyllant-component/#tested-setups)
+* [More are documented here](https://github.com/rmalbrecht/VaillantCloud/wiki#tested-setups)
 
 ## Features
-
-![Default Dashboard Screenshot](docs/docs/assets/default-dashboard.png)
 
 * Supports climate & hot water controls, as well as sensor information
 * Control operating modes, target temperature, and presets such as holiday more or quick veto
 * Set the schedule for climate zones, water heaters, and circulation pumps
-  with [a custom service](https://signalkraft.com/mypyllant-component/2-services/#setting-a-time-program)
+  with a custom service  
 * Track sensor information of devices, such as temperature, humidity, operating mode, energy usage, or energy efficiency
 * See diagnostic information, such as the current heating curve, flow temperature, firmware versions, or water pressure
 * Custom services to set holiday mode or quick veto temperature overrides, and their duration
@@ -46,16 +45,16 @@ from Saunier Duval & Bulex).
 1. [Install HACS](https://hacs.xyz/docs/setup/download)
 2. Search for the myVAILLANT integration in HACS and install it
 3. Restart Home Assistant
-4. [Add myVaillant integration](https://my.home-assistant.io/redirect/config_flow_start/?domain=mypyllant)
+4. [Add VaillantCloud integration](https://my.home-assistant.io/redirect/config_flow_start/?domain=myVaillant)
 5. Sign in with the email & password you used in the myVAILLANT app (or MiGo app for Saunier Duval)
 
 ### Manual
 
-1. Download [the latest release](https://github.com/signalkraft/mypyllant-component/releases)
+1. Download [the latest release]
 2. Extract the `custom_components` folder to your Home Assistant's config folder, the resulting folder structure should
-   be `config/custom_components/mypyllant`
+   be `config/custom_components/VaillantCloud`
 3. Restart Home Assistant
-4. [Add myVaillant integration](https://my.home-assistant.io/redirect/config_flow_start/?domain=mypyllant), or go to
+4. [Add myVaillant integration](https://my.home-assistant.io/redirect/config_flow_start/?domain=myVaillant), or go to
    Settings > Integrations and add myVAILLANT
 5. Sign in with the email & password you used in the myVAILLANT app (or MiGo app for Saunier Duval & Bulex)
 
@@ -188,28 +187,28 @@ There are custom services for almost every functionality of the myVAILLANT app:
 
 | Name                                                                                                                                                          | Description                                                                     | Target       | Fields                                      |
 |:--------------------------------------------------------------------------------------------------------------------------------------------------------------|:--------------------------------------------------------------------------------|:-------------|:--------------------------------------------|
-| [Set quick veto](https://my.home-assistant.io/redirect/developer_call_service/?service=mypyllant.set_quick_veto)                                              | Sets quick veto temperature with optional duration                              | climate      | Temperature, Duration                       |
-| [Set manual mode setpoint](https://my.home-assistant.io/redirect/developer_call_service/?service=mypyllant.set_manual_mode_setpoint)                          | Sets temperature for manual mode                                                | climate      | Temperature, Type                           |
-| [Cancel quick veto](https://my.home-assistant.io/redirect/developer_call_service/?service=mypyllant.cancel_quick_veto)                                        | Cancels quick veto temperature and returns to normal schedule / manual setpoint | climate      |                                             |
-| [Set holiday](https://my.home-assistant.io/redirect/developer_call_service/?service=mypyllant.set_holiday)                                                    | Set holiday / away mode with start / end or duration                            | climate      | Start Date, End Date, Duration              |
-| [Cancel Holiday](https://my.home-assistant.io/redirect/developer_call_service/?service=mypyllant.cancel_holiday)                                              | Cancel holiday / away mode                                                      | climate      |                                             |
-| [Set Zone Time Program](https://my.home-assistant.io/redirect/developer_call_service/?service=mypyllant.set_zone_time_program)                                | Updates the time program for a zone                                             | climate      | Type, Time Program                          |
-| [Set Water Heater Time Program](https://my.home-assistant.io/redirect/developer_call_service/?service=mypyllant.set_dhw_time_program)                         | Updates the time program for a water heater                                     | water_heater | Time Program                                |
-| [Set Water Heater Circulation Time Program](https://my.home-assistant.io/redirect/developer_call_service/?service=mypyllant.set_dhw_circulation_time_program) | Updates the time program for the circulation pump of a water heater             | water_heater | Time Program                                |
-| [Export Data](https://my.home-assistant.io/redirect/developer_call_service/?service=mypyllant.export)                                                         | Exports data from the mypyllant library                                         |              | Data, Data Resolution, Start Date, End Date |
-| [Generate Test Data](https://my.home-assistant.io/redirect/developer_call_service/?service=mypyllant.generate_test_data)                                      | Generates test data for the mypyllant library and returns it as YAML            |              |                                             |
-| [Export Yearly Energy Reports](https://my.home-assistant.io/redirect/developer_call_service/?service=mypyllant.report)                                        | Exports energy reports in CSV format per year                                   |              | Year                                        |
+| [Set quick veto](https://my.home-assistant.io/redirect/developer_call_service/?service=myVaillant.set_quick_veto)                                              | Sets quick veto temperature with optional duration                              | climate      | Temperature, Duration                       |
+| [Set manual mode setpoint](https://my.home-assistant.io/redirect/developer_call_service/?service=myVaillant.set_manual_mode_setpoint)                          | Sets temperature for manual mode                                                | climate      | Temperature, Type                           |
+| [Cancel quick veto](https://my.home-assistant.io/redirect/developer_call_service/?service=myVaillant.cancel_quick_veto)                                        | Cancels quick veto temperature and returns to normal schedule / manual setpoint | climate      |                                             |
+| [Set holiday](https://my.home-assistant.io/redirect/developer_call_service/?service=myVaillant.set_holiday)                                                    | Set holiday / away mode with start / end or duration                            | climate      | Start Date, End Date, Duration              |
+| [Cancel Holiday](https://my.home-assistant.io/redirect/developer_call_service/?service=myVaillant.cancel_holiday)                                              | Cancel holiday / away mode                                                      | climate      |                                             |
+| [Set Zone Time Program](https://my.home-assistant.io/redirect/developer_call_service/?service=myVaillant.set_zone_time_program)                                | Updates the time program for a zone                                             | climate      | Type, Time Program                          |
+| [Set Water Heater Time Program](https://my.home-assistant.io/redirect/developer_call_service/?service=myVaillant.set_dhw_time_program)                         | Updates the time program for a water heater                                     | water_heater | Time Program                                |
+| [Set Water Heater Circulation Time Program](https://my.home-assistant.io/redirect/developer_call_service/?service=myVaillant.set_dhw_circulation_time_program) | Updates the time program for the circulation pump of a water heater             | water_heater | Time Program                                |
+| [Export Data](https://my.home-assistant.io/redirect/developer_call_service/?service=myVaillant.export)                                                         | Exports data from the myVaillant library                                         |              | Data, Data Resolution, Start Date, End Date |
+| [Generate Test Data](https://my.home-assistant.io/redirect/developer_call_service/?service=myVaillant.generate_test_data)                                      | Generates test data for the myVaillant library and returns it as YAML            |              |                                             |
+| [Export Yearly Energy Reports](https://my.home-assistant.io/redirect/developer_call_service/?service=myVaillant.report)                                        | Exports energy reports in CSV format per year                                   |              | Year                                        |
 
 Additionally, there are home assistant's built in services for climate controls, water heaters, and switches.
 
 Search for "myvaillant" in Developer Tools > Services in your Home Assistant instance to get the full list plus an
 interactive UI.
 
-[![Open your Home Assistant instance and show your service developer tools with a specific service selected.](https://my.home-assistant.io/badges/developer_call_service.svg)](https://my.home-assistant.io/redirect/developer_call_service/?service=mypyllant.set_holiday)
+[![Open your Home Assistant instance and show your service developer tools with a specific service selected.](https://my.home-assistant.io/badges/developer_call_service.svg)](https://my.home-assistant.io/redirect/developer_call_service/?service=myVaillant.set_holiday)
 
 ## Contributing
 
-See [the docs on contributing](https://signalkraft.com/mypyllant-component/3-contributing/).
+See the docs on contributing
 
 ### Debugging
 
@@ -220,10 +219,10 @@ and restarting Home Assistant:
 logger:
   default: warning
   logs:
-    custom_components.mypyllant: debug
-    myPyllant: debug
+    custom_components.VaillantCloud: debug
+    myVaillant: debug
 ```
 
-### Contributing to the underlying mypyllant library
+### Contributing to the underlying myVaillant library
 
-See [this section on the contributing docs](https://signalkraft.com/mypyllant-component/3-contributing/#contributing-to-the-underlying-mypyllant-library).
+See the section on the contributing docs
