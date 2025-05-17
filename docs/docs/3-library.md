@@ -78,8 +78,8 @@ import asyncio
 import logging
 from datetime import datetime, timedelta
 
-from myPyllant.api import MyPyllantAPI
-from myPyllant.const import ALL_COUNTRIES, BRANDS, DEFAULT_BRAND
+from myVaillant.api import MyVaillantAPI
+from myVaillant.const import ALL_COUNTRIES, BRANDS, DEFAULT_BRAND
 
 parser = argparse.ArgumentParser(description="Export data from myVaillant API   .")
 parser.add_argument("user", help="Username (email address) for the myVaillant app")
@@ -102,7 +102,7 @@ parser.add_argument(
 
 
 async def main(user, password, brand, country):
-    async with MyPyllantAPI(user, password, brand, country) as api:
+    async with MyVaillantAPI(user, password, brand, country) as api:
         async for system in api.get_systems():
             print(await api.set_set_back_temperature(system.zones[0], 18))
             print(await api.quick_veto_zone_temperature(system.zones[0], 21, 5))
