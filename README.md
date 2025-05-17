@@ -11,8 +11,7 @@ from Saunier Duval & Bulex).
 > This integration is not affiliated with Vaillant, the developers take no responsibility for anything that happens to
 > your devices because of this library.
 
-(https://github.com/user-attachments/assets/665fd059-7516-42ed-afea-e95c43a70883)
-
+[![VaillantCloud](https://github.com/user-attachments/assets/665fd059-7516-42ed-afea-e95c43a70883)]
 
 * [Documentation](https://github.com/rmalbrecht/VaillantCloud/wiki)
 * [Discussion on Home Assistant Community](https://community.home-assistant.io/t/myvaillant-integration/542610)
