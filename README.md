@@ -7,11 +7,11 @@
 This Home Assistant component interfaces with the myVAILLANT API (and branded versions of it, such as the MiGo Link app
 from Saunier Duval & Bulex).
 
+![VaillantCloud](https://github.com/user-attachments/assets/665fd059-7516-42ed-afea-e95c43a70883)
+
 > [!WARNING] 
 > This integration is not affiliated with Vaillant, the developers take no responsibility for anything that happens to
 > your devices because of this library.
-
-[![VaillantCloud](https://github.com/user-attachments/assets/665fd059-7516-42ed-afea-e95c43a70883)]
 
 > [!IMPORTANT] 
 > This integration uses the API which is developed by Vaillant for it's myVaillant App. The API therefore supports only what the app needs.
