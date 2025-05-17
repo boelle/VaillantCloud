@@ -15,3 +15,4 @@ async def test_myvaillant_versions():
     assert all(
        m == matches[0] for m in matches
     ), f"myVaillant versions are not the same in all files: {matches}"
+    
