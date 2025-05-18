@@ -12,4 +12,4 @@ services:
       - ../myVaillant/src/myVaillant:/tmp/myVaillant
       - ./custom_components/vaillantcloud/:/tmp/vaillantcloud-component
       - /etc/localtime:/etc/localtime:ro
-    entrypoint: ["/init-custom"]
+    entrypoint: [ "/init-custom" ]
