@@ -4,13 +4,13 @@ import pytest
 from homeassistant.helpers.entity_registry import DATA_REGISTRY, EntityRegistry
 from homeassistant.loader import DATA_COMPONENTS, DATA_INTEGRATIONS
 
-from custom_components.VaillantCloud import SystemCoordinator
+from custom_components.vaillantcloud import SystemCoordinator
 from myVaillant.api import MyVaillantAPI
 from myVaillant.models import System
 from myVaillant.tests.generate_test_data import DATA_DIR
 from myVaillant.tests.utils import list_test_data, load_test_data
 
-from custom_components.VaillantCloud.binary_sensor import (
+from custom_components.vaillantcloud.binary_sensor import (
     CircuitIsCoolingAllowed,
     ControlError,
     ControlOnline,
@@ -18,8 +18,8 @@ from custom_components.VaillantCloud.binary_sensor import (
     async_setup_entry,
     ZoneIsManualCoolingActive,
 )
-from custom_components.VaillantCloud.utils import CircuitEntity
-from custom_components.VaillantCloud.const import DOMAIN
+from custom_components.vaillantcloud.utils import CircuitEntity
+from custom_components.vaillantcloud.const import DOMAIN
 from tests.utils import get_config_entry
 
 

@@ -117,6 +117,6 @@ and restarting Home Assistant:
 logger:
   default: warning
   logs:
-    custom_components.VaillantCloud: debug
+    custom_components.vaillantcloud: debug
     myVaillant: debug
 ```

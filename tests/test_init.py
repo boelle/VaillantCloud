@@ -11,9 +11,9 @@ from myVaillant.api import MyVaillantAPI
 from myVaillant.tests.generate_test_data import DATA_DIR
 from myVaillant.tests.utils import load_test_data
 
-from custom_components.VaillantCloud.const import DOMAIN
-from custom_components.VaillantCloud import async_setup_entry, async_unload_entry
-from custom_components.VaillantCloud.config_flow import DATA_SCHEMA
+from custom_components.vaillantcloud.const import DOMAIN
+from custom_components.vaillantcloud import async_setup_entry, async_unload_entry
+from custom_components.vaillantcloud.config_flow import DATA_SCHEMA
 from tests.utils import get_config_entry, test_user_input
 
 _LOGGER = logging.getLogger(__name__)

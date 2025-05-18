@@ -10,9 +10,9 @@ from homeassistant.loader import (
     DATA_MISSING_PLATFORMS,
 )
 
-from custom_components.VaillantCloud import SystemCoordinator
-from custom_components.VaillantCloud.climate import AmbisenseClimate
-from custom_components.VaillantCloud.const import (
+from custom_components.vaillantcloud import SystemCoordinator
+from custom_components.vaillantcloud.climate import AmbisenseClimate
+from custom_components.vaillantcloud.const import (
     SERVICE_GENERATE_TEST_DATA,
     SERVICE_EXPORT,
     DOMAIN,

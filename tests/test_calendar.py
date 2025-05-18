@@ -6,12 +6,12 @@ import pytest
 from homeassistant.helpers.entity_registry import DATA_REGISTRY, EntityRegistry
 from homeassistant.loader import DATA_COMPONENTS, DATA_INTEGRATIONS
 
-from custom_components.VaillantCloud.const import DOMAIN
+from custom_components.vaillantcloud.const import DOMAIN
 from myVaillant.api import MyVaillantAPI
 from myVaillant.tests.generate_test_data import DATA_DIR
 from myVaillant.tests.utils import list_test_data, load_test_data
 
-from custom_components.VaillantCloud.calendar import (
+from custom_components.vaillantcloud.calendar import (
     ZoneHeatingCalendar,
     DomesticHotWaterCalendar,
     async_setup_entry,

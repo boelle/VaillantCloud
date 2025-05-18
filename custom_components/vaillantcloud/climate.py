@@ -46,9 +46,9 @@ from myVaillant.enums import (
     ZoneOperatingType,
 )
 
-from custom_components.VaillantCloud.decorators import ensure_token_refresh
+from custom_components.vaillantcloud.decorators import ensure_token_refresh
 
-from custom_components.VaillantCloud.utils import (
+from custom_components.vaillantcloud.utils import (
     shorten_zone_name,
     EntityList,
     AmbisenseCoordinatorEntity,

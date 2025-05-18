@@ -12,15 +12,15 @@ from myVaillant.api import MyVaillantAPI
 from myVaillant.tests.generate_test_data import DATA_DIR
 from myVaillant.tests.utils import list_test_data, load_test_data
 
-from custom_components.VaillantCloud.const import DOMAIN
-from custom_components.VaillantCloud.coordinator import SystemCoordinator
-from custom_components.VaillantCloud.climate import (
+from custom_components.vaillantcloud.const import DOMAIN
+from custom_components.vaillantcloud.coordinator import SystemCoordinator
+from custom_components.vaillantcloud.climate import (
     ZoneClimate,
     async_setup_entry,
     ZONE_HVAC_ACTION_MAP,
     AmbisenseClimate,
 )
-from custom_components.VaillantCloud.ventilation_climate import VentilationClimate
+from custom_components.vaillantcloud.ventilation_climate import VentilationClimate
 from tests.utils import get_config_entry
 
 

@@ -5,12 +5,12 @@ from homeassistant.const import ATTR_TEMPERATURE
 from homeassistant.helpers.entity_registry import DATA_REGISTRY, EntityRegistry
 from homeassistant.loader import DATA_COMPONENTS, DATA_INTEGRATIONS
 
-from custom_components.VaillantCloud.const import DOMAIN
+from custom_components.vaillantcloud.const import DOMAIN
 from myVaillant.api import MyVaillantAPI
 from myVaillant.enums import DHWOperationMode
 from myVaillant.tests.utils import list_test_data
 
-from custom_components.VaillantCloud.water_heater import (
+from custom_components.vaillantcloud.water_heater import (
     DomesticHotWaterEntity,
     async_setup_entry,
 )
