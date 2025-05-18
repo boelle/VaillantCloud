@@ -12,5 +12,5 @@ envsubst < /config/.storage/core.config_entries.template > /config/.storage/core
 cp -r /tmp/myVaillant "$PYTHON_LIB_DIR"
 chattr +i -R "$PYTHON_LIB_DIR/myVaillant"
 mkdir -p /config/custom_components
-cp -r /tmp/VaillantCloud-component /config/custom_components/VaillantCloud
+cp -r /tmp/vaillantcloud-component /config/custom_components/vaillantcloud
 /init python -m homeassistant --config /config
