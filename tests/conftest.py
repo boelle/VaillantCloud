@@ -10,7 +10,7 @@ from custom_components.myvaillant.coordinator import (
 from myVaillant.api import MyVaillantAPI
 from myVaillant.const import DEFAULT_BRAND
 from myVaillant.models import Circuit, DomesticHotWater, System, Zone
-from myVaillant.tests.utils import _mocked_api, _myvaillant_aioresponses
+import myVaillant.tests.utils
 from polyfactory.factories import DataclassFactory
 
 from custom_components.myvaillant.const import (
@@ -75,12 +75,12 @@ class DomesticHotWaterFactory(DataclassFactory):
 
 @pytest.fixture
 def myvaillant_aioresponses():
-    return _myvaillant_aioresponses()
+    return myVaillant.tests.utils._myvaillant_aioresponses()
 
 
 @pytest.fixture
 async def mocked_api() -> MyVaillantAPI:
-    return await _mocked_api()
+    return await myVaillant.tests.utils._mocked_api()
 
 
 @pytest.fixture
