@@ -1,4 +1,4 @@
-aioresponses~=0.7.6
+aioresponses~=0.7.7
 croniter~=1.3.8
 watchdog~=6.0.0
 mock-open~=1.4.0
@@ -10,8 +10,8 @@ PyYAML~=6.0.1
 types-PyYAML~=6.0.12.20240311
 
 # Need specific versions
-pytest-homeassistant-custom-component==0.13.202
-myVaillant==0.4.0
+pytest-homeassistant-custom-component==0.13.245
+myVaillant==0.5.0
 
 # Versions handled by pytest-homeassistant-custom-component
 freezegun
