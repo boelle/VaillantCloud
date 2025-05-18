@@ -2,7 +2,7 @@ import re
 from pathlib import Path
 
 
-async def test_myvaillant_versions():
+async def test_vaillantcloud_versions():
     """
     Make sure myVaillant library is set to the same versions in all important files
     """

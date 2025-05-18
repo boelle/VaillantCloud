@@ -26,7 +26,7 @@ from tests.utils import get_config_entry
 @pytest.mark.parametrize("test_data", list_test_data())
 async def test_async_setup_binary_sensors(
     hass,
-    myvaillant_aioresponses,
+    vaillantcloud_aioresponses,
     mocked_api: MyVaillantAPI,
     system_coordinator_mock,
     test_data,
@@ -34,7 +34,7 @@ async def test_async_setup_binary_sensors(
     hass.data[DATA_COMPONENTS] = {}
     hass.data[DATA_INTEGRATIONS] = {}
     hass.data[DATA_REGISTRY] = EntityRegistry(hass)
-    with myvaillant_aioresponses(test_data) as _:
+    with vaillantcloud_aioresponses(test_data) as _:
         config_entry = get_config_entry()
         system_coordinator_mock.data = (
             await system_coordinator_mock._async_update_data()
@@ -52,12 +52,9 @@ async def test_async_setup_binary_sensors(
 
 @pytest.mark.parametrize("test_data", list_test_data())
 async def test_system_binary_sensors(
-    myvaillant_aioresponses,
-    mocked_api: MyVaillantAPI,
-    system_coordinator_mock,
-    test_data,
+    vaillantcloud_aioresponses, mocked_api: MyVaillantAPI, system_coordinator_mock, test_data
 ):
-    with myvaillant_aioresponses(test_data) as _:
+    with vaillantcloud_aioresponses(test_data) as _:
         system_coordinator_mock.data = (
             await system_coordinator_mock._async_update_data()
         )
@@ -83,12 +80,12 @@ async def test_system_binary_sensors(
 
 
 async def test_control_error(
-    myvaillant_aioresponses,
+    vaillantcloud_aioresponses,
     mocked_api: MyVaillantAPI,
     system_coordinator_mock: SystemCoordinator,
 ):
     test_data = load_test_data(DATA_DIR / "ambisense2.yaml")
-    with myvaillant_aioresponses(test_data) as _:
+    with vaillantcloud_aioresponses(test_data) as _:
         system_coordinator_mock.data = (
             await system_coordinator_mock._async_update_data()
         )
@@ -98,12 +95,12 @@ async def test_control_error(
 
 
 async def test_is_manual_cooling_active(
-    myvaillant_aioresponses,
+    vaillantcloud_aioresponses,
     mocked_api: MyVaillantAPI,
     system_coordinator_mock: SystemCoordinator,
 ):
     test_data = load_test_data(DATA_DIR / "ventilation")
-    with myvaillant_aioresponses(test_data) as _:
+    with vaillantcloud_aioresponses(test_data) as _:
         system_coordinator_mock.data = (
             await system_coordinator_mock._async_update_data()
         )

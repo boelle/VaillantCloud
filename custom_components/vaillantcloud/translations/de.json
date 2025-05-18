@@ -21,7 +21,7 @@
   },
   "entity": {
     "climate": {
-      "myvaillant_zone": {
+      "vaillantcloud_zone": {
         "state_attributes": {
           "preset_mode": {
             "state": {

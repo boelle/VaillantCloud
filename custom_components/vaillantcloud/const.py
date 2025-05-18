@@ -1,6 +1,6 @@
 from myVaillant.enums import ZoneOperatingType
 
-DOMAIN = "VaillantCloud"
+DOMAIN = "vaillantcloud"
 OPTION_UPDATE_INTERVAL = "update_interval"
 OPTION_UPDATE_INTERVAL_DAILY = "update_interval_daily"
 OPTION_REFRESH_DELAY = "refresh_delay"

@@ -346,7 +346,7 @@ class ZoneClimate(CoordinatorEntity, ClimateEntity):
     """Climate for a zone."""
 
     coordinator: SystemCoordinator
-    _attr_translation_key = "myvaillant_zone"
+    _attr_translation_key = "vaillantcloud_zone"
     _attr_temperature_unit = UnitOfTemperature.CELSIUS
     _attr_target_temperature_step = 0.5
     _enable_turn_on_off_backwards_compatibility = False
@@ -878,13 +878,13 @@ class ZoneClimate(CoordinatorEntity, ClimateEntity):
                 ][0]
             else:
                 raise ValueError(
-                    f"Invalid preset mode, use one of {', '.join(set(self.preset_mode_map.values()))}"
+                    f'Invalid preset mode, use one of {", ".join(set(self.preset_mode_map.values()))}'
                 )
             await self.set_zone_operating_mode(requested_mode)
         else:
             if preset_mode not in self.preset_mode_map:
                 raise ValueError(
-                    f"Invalid preset mode {preset_mode}, use one of {', '.join(self.preset_mode_map.keys())}"
+                    f'Invalid preset mode {preset_mode}, use one of {", ".join(self.preset_mode_map.keys())}'
                 )
             requested_mode = self.preset_mode_map[preset_mode]
             if requested_mode != self.zone.current_special_function:
@@ -926,7 +926,7 @@ class ZoneClimate(CoordinatorEntity, ClimateEntity):
                 if requested_mode == ZoneCurrentSpecialFunction.SYSTEM_OFF:
                     # SYSTEM_OFF is a valid special function, but since there's no API endpoint we
                     # just turn off the system though the zone heating mode API.
-                    # See https://github.com/signalkraft/myvaillant-component/issues/27#issuecomment-1746568372
+                    # See https://github.com/signalkraft/vaillantcloud-component/issues/27#issuecomment-1746568372
                     await self.async_set_hvac_mode(HVACMode.OFF)
 
                 await self.coordinator.async_request_refresh_delayed()
