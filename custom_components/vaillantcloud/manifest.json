@@ -1,16 +1,16 @@
 {
   "domain": "vaillantcloud",
-  "name": "myVAILLANT",
+  "name": "VaillantCloud",
   "codeowners": [
-    "@signalkraft"
+    "@rmalbrecht"
   ],
   "config_flow": true,
-  "documentation": "https://github.com/signalkraft/vaillantcloud-component#readme",
+  "documentation": "https://github.com/rmalbrecht/VaillantCloud/wiki",
   "integration_type": "hub",
   "iot_class": "cloud_polling",
-  "issue_tracker": "https://github.com/signalkraft/vaillantcloud-component/issues",
+  "issue_tracker": "https://github.com/rmalbrecht/VaillantCloud/issues",
   "requirements": [
     "myVaillant==0.6.0"
   ],
-  "version": "v0.9.14"
+  "version": "v0.9.15"
 }
