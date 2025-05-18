@@ -1,8 +1,8 @@
 # VaillantCloud for Home Assistant 
 
-[![GitHub Release](https://img.shields.io/github/release/rmalbrecht/VaillantCloud.svg)](https://github.com/signalkraft/VaillantCloud/releases)
+[![GitHub Release](https://img.shields.io/github/release/rmalbrecht/VaillantCloud.svg)](https://github.com/rmalbrecht/VaillantCloud/releases)
 [![License](https://img.shields.io/github/license/rmalbrecht/VaillantCloud.svg)](https://github.com/rmalbrecht/VaillantCloud/blob/main/LICENSE)
-![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/rmalbrecht/VaillantCloud/build-test.yaml)
+![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/rmalbrecht/VaillantCloud/build.yml)
 
 This Home Assistant component interfaces with the myVAILLANT API (and branded versions of it, such as the MiGo Link app
 from Saunier Duval & Bulex).
