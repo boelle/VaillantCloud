@@ -37,14 +37,14 @@ def setup_hass_for_service_test(hass):
 @pytest.mark.parametrize("test_data", list_test_data())
 async def test_service_generate_test_data(
     hass,
-    vaillantcloud_aioresponses,
+    myVaillant_aioresponses,
     mocked_api: MyVaillantAPI,
     system_coordinator_mock,
     test_data,
 ):
     hass = setup_hass_for_service_test(hass)
 
-    with vaillantcloud_aioresponses(test_data):
+    with myVaillant_aioresponses(test_data):
         config_entry = get_config_entry()
         config_entry.add_to_hass(hass)
         await hass.config_entries.async_setup(config_entry.entry_id)
@@ -66,14 +66,14 @@ async def test_service_generate_test_data(
 @pytest.mark.parametrize("test_data", list_test_data())
 async def test_service_export(
     hass,
-    vaillantcloud_aioresponses,
+    myVaillant_aioresponses,
     mocked_api: MyVaillantAPI,
     system_coordinator_mock,
     test_data,
 ):
     hass = setup_hass_for_service_test(hass)
 
-    with vaillantcloud_aioresponses(test_data):
+    with myVaillant_aioresponses(test_data):
         config_entry = get_config_entry()
         config_entry.add_to_hass(hass)
         await hass.config_entries.async_setup(config_entry.entry_id)
@@ -101,14 +101,14 @@ async def test_service_export(
 
 
 async def test_ambisense_time_program(
-    vaillantcloud_aioresponses,
+    myVaillant_aioresponses,
     mocked_api: MyVaillantAPI,
     system_coordinator_mock: SystemCoordinator,
 ) -> None:
     test_data_files = ["ambisense", "ambisense2.yaml"]
     for f in test_data_files:
         test_data = load_test_data(DATA_DIR / f)
-        with vaillantcloud_aioresponses(test_data) as aio:
+        with myVaillant_aioresponses(test_data) as aio:
             system_coordinator_mock.data = (
                 await system_coordinator_mock._async_update_data()
             )
