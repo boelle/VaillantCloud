@@ -6,12 +6,12 @@ from myVaillant.tests.utils import load_test_data
 
 
 async def test_manual_cooling_days(
-    myvaillant_aioresponses,
+    vaillantcloud_aioresponses,
     mocked_api: MyVaillantAPI,
     system_coordinator_mock: SystemCoordinator,
 ):
     test_data = load_test_data(DATA_DIR / "ventilation")
-    with myvaillant_aioresponses(test_data) as _:
+    with vaillantcloud_aioresponses(test_data) as _:
         system_coordinator_mock.data = (
             await system_coordinator_mock._async_update_data()
         )
