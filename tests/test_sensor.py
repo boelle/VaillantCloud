@@ -64,7 +64,10 @@ async def test_create_system_sensors(
 
 @pytest.mark.parametrize("test_data", list_test_data())
 async def test_system_sensors(
-    vaillantcloud_aioresponses, mocked_api: MyVaillantAPI, system_coordinator_mock, test_data
+    vaillantcloud_aioresponses,
+    mocked_api: MyVaillantAPI,
+    system_coordinator_mock,
+    test_data,
 ):
     with vaillantcloud_aioresponses(test_data) as _:
         system_coordinator_mock.data = (
@@ -133,7 +136,10 @@ async def test_zone_sensors(
 
 @pytest.mark.parametrize("test_data", list_test_data())
 async def test_circuit_sensors(
-    vaillantcloud_aioresponses, mocked_api: MyVaillantAPI, system_coordinator_mock, test_data
+    vaillantcloud_aioresponses,
+    mocked_api: MyVaillantAPI,
+    system_coordinator_mock,
+    test_data,
 ):
     with vaillantcloud_aioresponses(test_data) as _:
         system_coordinator_mock.data = (
