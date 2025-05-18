@@ -20,7 +20,7 @@ from tests.utils import get_config_entry
 @pytest.mark.parametrize("test_data", list_test_data())
 async def test_async_setup_water_heater(
     hass,
-    myVaillant_aioresponses,
+    myvaillant_aioresponses,
     mocked_api: MyVaillantAPI,
     system_coordinator_mock,
     test_data,
@@ -28,7 +28,7 @@ async def test_async_setup_water_heater(
     hass.data[DATA_COMPONENTS] = {}
     hass.data[DATA_INTEGRATIONS] = {}
     hass.data[DATA_REGISTRY] = EntityRegistry(hass)
-    with myVaillant_aioresponses(test_data) as _:
+    with myvaillant_aioresponses(test_data) as _:
         config_entry = get_config_entry()
         system_coordinator_mock.data = (
             await system_coordinator_mock._async_update_data()
@@ -55,12 +55,12 @@ async def test_async_setup_water_heater(
 
 @pytest.mark.parametrize("test_data", list_test_data())
 async def test_water_heater(
-    myVaillant_aioresponses,
+    myvaillant_aioresponses,
     mocked_api: MyVaillantAPI,
     system_coordinator_mock,
     test_data,
 ):
-    with myVaillant_aioresponses(test_data) as _:
+    with myvaillant_aioresponses(test_data) as _:
         system_coordinator_mock.data = (
             await system_coordinator_mock._async_update_data()
         )
