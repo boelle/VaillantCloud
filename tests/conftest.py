@@ -10,7 +10,7 @@ from custom_components.myvaillant.coordinator import (
 from myVaillant.api import MyVaillantAPI
 from myVaillant.const import DEFAULT_BRAND
 from myVaillant.models import Circuit, DomesticHotWater, System, Zone
-from myVaillant.tests.utils import _mocked_api, _myvaillant_aioresponses
+from myVaillant.tests.utils import _mocked_api, _myVaillant_aioresponses
 from polyfactory.factories import DataclassFactory
 
 from custom_components.myvaillant.const import (
