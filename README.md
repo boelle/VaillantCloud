@@ -20,7 +20,7 @@ from Saunier Duval & Bulex).
 > This API is not scoped for smart home control, ... 
 
 > [!NOTE]
-> There many many different setups and products from Vaillant. Without manufacturer documentation or support it's impossible to test every single installation.
+> There are many many different setups and products from Vaillant. Without manufacturer documentation or support it's impossible to test every single installation.
 > If something is not working in your installation: happy to accept a pull request with the fix. Otherwise, not much can be done.
 
 
@@ -104,7 +104,7 @@ With debugging enabled, there's a chance to find the culprit in the data returne
 
 ## Vaillant Load Limits
 
-To protect their API Vaillant has employed load limits. While the exact limits are unknown, there more app-installtions you have and the more often Home Assistant polls the information, the faster you will hit the limit. Nothing can be done here. Vaillant might just decline the API calls, or might eben ban your whole account. You have been warned!
+To protect their API Vaillant has employed load limits. While the exact limits are unknown, the more app-installtions you have and the more often Home Assistant polls the information, the faster you will hit the limit. Nothing can be done here. Vaillant might just decline the API calls, or might eben ban your whole account. You have been warned!
 
 # Debugging
 
