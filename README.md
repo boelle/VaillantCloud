@@ -90,8 +90,6 @@ instead overwrite the temperatures set in the time schedule with the new value (
 
 The country you registered your myVAILLANT account in. The list of options is limited to known supported countries.
 
-If a country is missing, please open an issue.
-
 ## Brand
 
 Brand of your HVAC equipment and app, pick Saunier Duval if you use the MiGo Link app.
@@ -106,7 +104,7 @@ With debugging enabled, there's a chance to find the culprit in the data returne
 
 ## Vaillant Load Limits
 
-To protect their API Vaillant has employed load limits. While the exact limits are unknown, there more app-installtions you have and the more often Home Assistant polls the information, the faster you will hit the limit. Nothing can be done here.
+To protect their API Vaillant has employed load limits. While the exact limits are unknown, there more app-installtions you have and the more often Home Assistant polls the information, the faster you will hit the limit. Nothing can be done here. Vaillant might just decline the API calls, or might eben ban your whole account. You have been warned!
 
 # Debugging
 
