@@ -9,9 +9,9 @@ assignees: ''
 
 ### Before submitting a new issue
 
-- [ ] I [redownloaded the latest release](https://my.home-assistant.io/redirect/hacs_repository/?owner=signalkraft&repository=myvaillant-component) and restarted Home Assistant
-- [ ] I've checked [known issues](https://signalkraft.com/myvaillant-component/#known-issues)
-- [ ] I've [enabled debug logs](https://signalkraft.com/myvaillant-component/3-contributing/#debugging) and attached the relevant logs to this ticket
+- [ ] I [redownloaded the latest release](https://my.home-assistant.io/redirect/hacs_repository/?owner=rmalbrecht&repository=VaillantCloud) and restarted Home Assistant
+- [ ] I've checked [known issues](https://github.com/rmalbrecht/VaillantCloud/issues & https://github.com/rmalbrecht/VaillantCloud/wiki#known-issues)
+- [ ] I've [enabled debug logs](https://github.com/rmalbrecht/VaillantCloud/wiki/Contributing#debugging) and attached the relevant logs to this ticket
 
 ### Problem description
 
